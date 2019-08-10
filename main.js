@@ -5196,11 +5196,20 @@ var author$project$Main$update = F2(
 	});
 var elm$html$Html$a = _VirtualDom_node('a');
 var elm$html$Html$div = _VirtualDom_node('div');
+var elm$html$Html$i = _VirtualDom_node('i');
 var elm$html$Html$li = _VirtualDom_node('li');
 var elm$html$Html$nav = _VirtualDom_node('nav');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
 var elm$html$Html$ul = _VirtualDom_node('ul');
+var elm$virtual_dom$VirtualDom$attribute = F2(
+	function (key, value) {
+		return A2(
+			_VirtualDom_attribute,
+			_VirtualDom_noOnOrFormAction(key),
+			_VirtualDom_noJavaScriptOrHtmlUri(value));
+	});
+var elm$html$Html$Attributes$attribute = elm$virtual_dom$VirtualDom$attribute;
 var elm$json$Json$Encode$string = _Json_wrap;
 var elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -5280,12 +5289,22 @@ var author$project$Main$viewNav = A2(
 									elm$html$Html$a,
 									_List_fromArray(
 										[
-											elm$html$Html$Attributes$href('/'),
-											elm$html$Html$Attributes$class('brand-logo')
+											elm$html$Html$Attributes$href('#'),
+											A2(elm$html$Html$Attributes$attribute, 'data-target', 'for-mobile'),
+											elm$html$Html$Attributes$class('sidenav-trigger')
 										]),
 									_List_fromArray(
 										[
-											elm$html$Html$text('ODK')
+											A2(
+											elm$html$Html$i,
+											_List_fromArray(
+												[
+													elm$html$Html$Attributes$class('material-icons')
+												]),
+											_List_fromArray(
+												[
+													elm$html$Html$text('menu')
+												]))
 										])),
 									A2(
 									elm$html$Html$ul,
@@ -5310,14 +5329,178 @@ var author$project$Main$viewNav = A2(
 													elm$html$Html$a,
 													_List_fromArray(
 														[
-															elm$html$Html$Attributes$href('/demo')
+															elm$html$Html$Attributes$href('/'),
+															elm$html$Html$Attributes$class('nav-link')
 														]),
 													_List_fromArray(
 														[
-															elm$html$Html$text('Demo')
+															elm$html$Html$text('Home')
+														]))
+												])),
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													A2(
+													elm$html$Html$a,
+													_List_fromArray(
+														[
+															elm$html$Html$Attributes$href('/gallery'),
+															elm$html$Html$Attributes$class('nav-link-selected')
+														]),
+													_List_fromArray(
+														[
+															elm$html$Html$text('Gallery')
+														]))
+												])),
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													A2(
+													elm$html$Html$a,
+													_List_fromArray(
+														[
+															elm$html$Html$Attributes$href('/biography'),
+															elm$html$Html$Attributes$class('nav-link')
+														]),
+													_List_fromArray(
+														[
+															elm$html$Html$text('Biography')
+														]))
+												])),
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													A2(
+													elm$html$Html$a,
+													_List_fromArray(
+														[
+															elm$html$Html$Attributes$href('/links'),
+															elm$html$Html$Attributes$class('nav-link')
+														]),
+													_List_fromArray(
+														[
+															elm$html$Html$text('Links')
+														]))
+												])),
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													A2(
+													elm$html$Html$a,
+													_List_fromArray(
+														[
+															elm$html$Html$Attributes$href('/contact'),
+															elm$html$Html$Attributes$class('nav-link')
+														]),
+													_List_fromArray(
+														[
+															elm$html$Html$text('Contact')
 														]))
 												]))
 										]))
+								]))
+						]))
+				])),
+			A2(
+			elm$html$Html$ul,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('sidenav'),
+					elm$html$Html$Attributes$id('for-mobile')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$a,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$href('/'),
+									elm$html$Html$Attributes$class('nav-link')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text('Home')
+								]))
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$a,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$href('/gallery'),
+									elm$html$Html$Attributes$class('nav-link-selected')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text('Gallery')
+								]))
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$a,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$href('/biography'),
+									elm$html$Html$Attributes$class('nav-link')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text('Biography')
+								]))
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$a,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$href('/links'),
+									elm$html$Html$Attributes$class('nav-link')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text('Links')
+								]))
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$a,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$href('/contact'),
+									elm$html$Html$Attributes$class('nav-link')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text('Contact')
 								]))
 						]))
 				]))
@@ -5335,7 +5518,7 @@ var author$project$Main$view = function (model) {
 					]),
 				_List_fromArray(
 					[
-						elm$html$Html$text('text')
+						elm$html$Html$text('textt')
 					]))
 			]),
 		title: 'ODK'
