@@ -3,6 +3,7 @@ import Browser.Navigation as Nav
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Url
+import Url.Parser as Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, string, top)
 
 
 
@@ -28,12 +29,22 @@ main =
 type alias Model =
   { key : Nav.Key
   , url : Url.Url
+  , page : Page
   }
+
+
+type Page
+  = Home
+  | Gallery
+  | Biography
+  | Links
+  | Contact
+  | NotFound
 
 
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init flags url key =
-  ( Model key url, Cmd.none )
+  stepUrl <| Model key url NotFound
 
 
 
@@ -57,9 +68,7 @@ update msg model =
           ( model, Nav.load href )
 
     UrlChanged url ->
-      ( { model | url = url }
-      , Cmd.none
-      )
+      stepUrl { model | url = url }
 
 
 
@@ -77,15 +86,15 @@ subscriptions _ =
 
 view : Model -> Browser.Document Msg
 view model =
-  { title = "ODK"
+  { title = "Sai's Portfolio"
     , body =
-        [ viewNav
-        , div [ class "container" ] [ text "textt" ]
+        [ viewNav model
+        , div [ class "container" ] [ viewPage model ]
         ]
     }
 
-viewNav : Html Msg
-viewNav =
+viewNav : Model -> Html Msg
+viewNav model =
     div [ class "row" ]
         [ nav []
             [ div [ class "nav-wrapper" ]
@@ -95,26 +104,60 @@ viewNav =
                           [ id "nav-mobile"
                           , classList
                               [ ( "right", True ), ( "hide-on-med-and-down", True ) ]
-                          ]
-                          [ li [] [ a [ href "/", class "nav-link" ] [ text "Home" ] ]
-                          , li [] [ a [ href "/gallery", class "nav-link-selected" ] [ text "Gallery" ] ]
-                          , li [] [ a [ href "/biography", class "nav-link" ] [ text "Biography" ] ]
-                          , li [] [ a [ href "/links", class "nav-link" ] [ text "Links" ] ]
-                          , li [] [ a [ href "/contact", class "nav-link" ] [ text "Contact" ] ]
-                          ]
+                          ] (showMenu model.page)
                     ]
                 ]
             ]
             , ul
-                [ class "sidenav", id "for-mobile" ] 
-                [  li [] [ a [ href "/", class "nav-link" ] [ text "Home" ] ]
-                , li [] [ a [ href "/gallery", class "nav-link-selected" ] [ text "Gallery" ] ]
-                , li [] [ a [ href "/biography", class "nav-link" ] [ text "Biography" ] ]
-                , li [] [ a [ href "/links", class "nav-link" ] [ text "Links" ] ]
-                , li [] [ a [ href "/contact", class "nav-link" ] [ text "Contact" ] ]
-
-                ]
+                [ class "sidenav", id "for-mobile" ] (showMenu model.page)
         ]
+
+
+showMenu : Page -> List (Html msg)
+showMenu page =
+  [  li (if page == Home then [ class "active" ] else []) [ a [ href "/" ] [ text "Home" ] ]
+    , li (if page == Gallery then [ class "active" ] else []) [ a [ href "/gallery" ] [ text "Gallery" ] ]
+    , li (if page == Biography then [ class "active" ] else []) [ a [ href "/biography" ] [ text "Biography" ] ]
+    , li (if page == Links then [ class "active" ] else []) [ a [ href "/links" ] [ text "Links" ] ]
+    , li (if page == Contact then [ class "active" ] else []) [ a [ href "/contact" ] [ text "Contact" ] ]
+                ]
+
+viewPage : Model -> Html Msg
+viewPage { url, page } =
+    case page of
+        Home ->
+            text "Home"
+
+        Gallery ->
+            text "Gallery."
+
+        Biography ->
+            text "Bio."
+        
+        Links ->
+            text "Link."
+        
+        Contact ->
+            text "Contact."
+
+        NotFound ->
+            text <| Url.toString url ++ " was not found. "
+
+
+stepUrl : Model -> ( Model, Cmd Msg )
+stepUrl model =
+    let
+        parser =
+            oneOf
+                [ map ( { model | page = Home }, Cmd.none ) top
+                , map ( { model | page = Gallery }, Cmd.none ) (s "gallery")
+                , map ( { model | page = Biography }, Cmd.none ) (s "biography")
+                , map ( { model | page = Links }, Cmd.none ) (s "links")
+                , map ( { model | page = Contact }, Cmd.none ) (s "contact")
+                ]
+    in
+    Parser.parse parser model.url
+        |> Maybe.withDefault ( { model | page = NotFound }, Cmd.none )
 
 
 viewLink : String -> Html msg
