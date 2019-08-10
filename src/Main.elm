@@ -80,7 +80,7 @@ view model =
   { title = "ODK"
     , body =
         [ viewNav
-        , div [ class "container" ] [ text "text" ]
+        , div [ class "container" ] [ text "textt" ]
         ]
     }
 
