@@ -115,11 +115,11 @@ viewNav model =
 
 showMenu : Page -> List (Html msg)
 showMenu page =
-  [  li (if page == Home then [ class "active" ] else []) [ a [ href "/" ] [ text "Home" ] ]
-    , li (if page == Gallery then [ class "active" ] else []) [ a [ href "/gallery" ] [ text "Gallery" ] ]
-    , li (if page == Biography then [ class "active" ] else []) [ a [ href "/biography" ] [ text "Biography" ] ]
-    , li (if page == Links then [ class "active" ] else []) [ a [ href "/links" ] [ text "Links" ] ]
-    , li (if page == Contact then [ class "active" ] else []) [ a [ href "/contact" ] [ text "Contact" ] ]
+  [  li (if page == Home then [ class "active" ] else []) [ a [ href "/meme" ] [ text "Home" ] ]
+    , li (if page == Gallery then [ class "active" ] else []) [ a [ href "/meme/gallery" ] [ text "Gallery" ] ]
+    , li (if page == Biography then [ class "active" ] else []) [ a [ href "/meme/biography" ] [ text "Biography" ] ]
+    , li (if page == Links then [ class "active" ] else []) [ a [ href "/meme/links" ] [ text "Links" ] ]
+    , li (if page == Contact then [ class "active" ] else []) [ a [ href "/meme/contact" ] [ text "Contact" ] ]
                 ]
 
 viewPage : Model -> Html Msg
@@ -150,10 +150,11 @@ stepUrl model =
         parser =
             oneOf
                 [ map ( { model | page = Home }, Cmd.none ) top
-                , map ( { model | page = Gallery }, Cmd.none ) (s "gallery")
-                , map ( { model | page = Biography }, Cmd.none ) (s "biography")
-                , map ( { model | page = Links }, Cmd.none ) (s "links")
-                , map ( { model | page = Contact }, Cmd.none ) (s "contact")
+                , map ( { model | page = Home }, Cmd.none ) (s "meme")
+                , map ( { model | page = Gallery }, Cmd.none ) (s "meme" </> s "gallery")
+                , map ( { model | page = Biography }, Cmd.none ) (s "meme" </> s "biography")
+                , map ( { model | page = Links }, Cmd.none ) (s "meme" </> s "links")
+                , map ( { model | page = Contact }, Cmd.none ) (s "meme" </> s "contact")
                 ]
     in
     Parser.parse parser model.url

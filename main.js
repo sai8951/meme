@@ -5624,6 +5624,18 @@ var elm$url$Url$Parser$s = function (str) {
 			}
 		});
 };
+var elm$url$Url$Parser$slash = F2(
+	function (_n0, _n1) {
+		var parseBefore = _n0.a;
+		var parseAfter = _n1.a;
+		return elm$url$Url$Parser$Parser(
+			function (state) {
+				return A2(
+					elm$core$List$concatMap,
+					parseAfter,
+					parseBefore(state));
+			});
+	});
 var elm$url$Url$Parser$top = elm$url$Url$Parser$Parser(
 	function (state) {
 		return _List_fromArray(
@@ -5646,9 +5658,20 @@ var author$project$Main$stepUrl = function (model) {
 				_Utils_Tuple2(
 					_Utils_update(
 						model,
+						{page: author$project$Main$Home}),
+					elm$core$Platform$Cmd$none),
+				elm$url$Url$Parser$s('meme')),
+				A2(
+				elm$url$Url$Parser$map,
+				_Utils_Tuple2(
+					_Utils_update(
+						model,
 						{page: author$project$Main$Gallery}),
 					elm$core$Platform$Cmd$none),
-				elm$url$Url$Parser$s('gallery')),
+				A2(
+					elm$url$Url$Parser$slash,
+					elm$url$Url$Parser$s('meme'),
+					elm$url$Url$Parser$s('gallery'))),
 				A2(
 				elm$url$Url$Parser$map,
 				_Utils_Tuple2(
@@ -5656,7 +5679,10 @@ var author$project$Main$stepUrl = function (model) {
 						model,
 						{page: author$project$Main$Biography}),
 					elm$core$Platform$Cmd$none),
-				elm$url$Url$Parser$s('biography')),
+				A2(
+					elm$url$Url$Parser$slash,
+					elm$url$Url$Parser$s('meme'),
+					elm$url$Url$Parser$s('biography'))),
 				A2(
 				elm$url$Url$Parser$map,
 				_Utils_Tuple2(
@@ -5664,7 +5690,10 @@ var author$project$Main$stepUrl = function (model) {
 						model,
 						{page: author$project$Main$Links}),
 					elm$core$Platform$Cmd$none),
-				elm$url$Url$Parser$s('links')),
+				A2(
+					elm$url$Url$Parser$slash,
+					elm$url$Url$Parser$s('meme'),
+					elm$url$Url$Parser$s('links'))),
 				A2(
 				elm$url$Url$Parser$map,
 				_Utils_Tuple2(
@@ -5672,7 +5701,10 @@ var author$project$Main$stepUrl = function (model) {
 						model,
 						{page: author$project$Main$Contact}),
 					elm$core$Platform$Cmd$none),
-				elm$url$Url$Parser$s('contact'))
+				A2(
+					elm$url$Url$Parser$slash,
+					elm$url$Url$Parser$s('meme'),
+					elm$url$Url$Parser$s('contact')))
 			]));
 	return A2(
 		elm$core$Maybe$withDefault,
@@ -6040,7 +6072,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
-							elm$html$Html$Attributes$href('/')
+							elm$html$Html$Attributes$href('/meme')
 						]),
 					_List_fromArray(
 						[
@@ -6059,7 +6091,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
-							elm$html$Html$Attributes$href('/gallery')
+							elm$html$Html$Attributes$href('/meme/gallery')
 						]),
 					_List_fromArray(
 						[
@@ -6078,7 +6110,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
-							elm$html$Html$Attributes$href('/biography')
+							elm$html$Html$Attributes$href('/meme/biography')
 						]),
 					_List_fromArray(
 						[
@@ -6097,7 +6129,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
-							elm$html$Html$Attributes$href('/links')
+							elm$html$Html$Attributes$href('/meme/links')
 						]),
 					_List_fromArray(
 						[
@@ -6116,7 +6148,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
-							elm$html$Html$Attributes$href('/contact')
+							elm$html$Html$Attributes$href('/meme/contact')
 						]),
 					_List_fromArray(
 						[
