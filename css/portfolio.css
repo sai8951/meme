@@ -1,0 +1,18 @@
+.nav-link {
+    color: #000000
+}
+
+.nav-link-selected {
+    color: #000000;
+    background-color: #80cbc4
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: none;
+    border-bottom:solid 4px #80cbc4
+}
+
+nav a {
+    color: #000000
+}

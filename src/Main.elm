@@ -90,16 +90,30 @@ viewNav =
         [ nav []
             [ div [ class "nav-wrapper" ]
                 [ div [ classList [ ( "col", True ), ( "s12", True ) ] ]
-                    [ a [ href "/", class "brand-logo" ] [ text "ODK" ]
-                    , ul
-                        [ id "nav-mobile"
-                        , classList
-                            [ ( "right", True ), ( "hide-on-med-and-down", True ) ]
-                        ]
-                        [ li [] [ a [ href "/demo" ] [ text "Demo" ] ] ]
+                    [ a [ href "#", attribute "data-target" "for-mobile",  class "sidenav-trigger" ] [ i [ class "material-icons" ] [ text "menu" ] ]
+                      , ul
+                          [ id "nav-mobile"
+                          , classList
+                              [ ( "right", True ), ( "hide-on-med-and-down", True ) ]
+                          ]
+                          [ li [] [ a [ href "/", class "nav-link" ] [ text "Home" ] ]
+                          , li [] [ a [ href "/gallery", class "nav-link-selected" ] [ text "Gallery" ] ]
+                          , li [] [ a [ href "/biography", class "nav-link" ] [ text "Biography" ] ]
+                          , li [] [ a [ href "/links", class "nav-link" ] [ text "Links" ] ]
+                          , li [] [ a [ href "/contact", class "nav-link" ] [ text "Contact" ] ]
+                          ]
                     ]
                 ]
             ]
+            , ul
+                [ class "sidenav", id "for-mobile" ] 
+                [  li [] [ a [ href "/", class "nav-link" ] [ text "Home" ] ]
+                , li [] [ a [ href "/gallery", class "nav-link-selected" ] [ text "Gallery" ] ]
+                , li [] [ a [ href "/biography", class "nav-link" ] [ text "Biography" ] ]
+                , li [] [ a [ href "/links", class "nav-link" ] [ text "Links" ] ]
+                , li [] [ a [ href "/contact", class "nav-link" ] [ text "Contact" ] ]
+
+                ]
         ]
 
 
