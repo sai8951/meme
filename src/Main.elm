@@ -1,18 +1,24 @@
-module Main exposing (main)
-
 import Browser
+import Browser.Navigation as Nav
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+import Url
+
+
+
+-- MAIN
 
 
 main : Program () Model Msg
 main =
-    Browser.sandbox
-        { init = init
-        , update = update
-        , view = view
-        }
+  Browser.application
+    { init = init
+    , view = view
+    , update = update
+    , subscriptions = subscriptions
+    , onUrlChange = UrlChanged
+    , onUrlRequest = LinkClicked
+    }
 
 
 
@@ -20,16 +26,14 @@ main =
 
 
 type alias Model =
-    { input : String
-    , memos : List String
-    }
+  { key : Nav.Key
+  , url : Url.Url
+  }
 
 
-init : Model
-init =
-    { input = ""
-    , memos = []
-    }
+init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
+init flags url key =
+  ( Model key url, Cmd.none )
 
 
 
@@ -37,51 +41,68 @@ init =
 
 
 type Msg
-    = Input String
-    | Submit
-    | Done Int
+  = LinkClicked Browser.UrlRequest
+  | UrlChanged Url.Url
 
 
-update : Msg -> Model -> Model
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    case msg of
-        Input input ->
-            { model | input = input }
+  case msg of
+    LinkClicked urlRequest ->
+      case urlRequest of
+        Browser.Internal url ->
+          ( model, Nav.pushUrl model.key (Url.toString url) )
 
-        Submit ->
-            { model
-                | input = ""
-                , memos = model.input :: model.memos
-            }
+        Browser.External href ->
+          ( model, Nav.load href )
 
-        Done done ->
-            { model
-                | memos = List.take done model.memos ++ List.drop (done + 1) model.memos
-            }
+    UrlChanged url ->
+      ( { model | url = url }
+      , Cmd.none
+      )
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions _ =
+  Sub.none
 
 
 
 -- VIEW
 
 
-view : Model -> Html Msg
+view : Model -> Browser.Document Msg
 view model =
-    div []
-        [ Html.form [ onSubmit Submit ]
-            [ input [ value model.input, onInput Input ] []
-            , button
-                [ disabled (String.length model.input < 1) ]
-                [ text "Add ToDo" ]
+  { title = "ODK"
+    , body =
+        [ viewNav
+        , div [ class "container" ] [ text "textt" ]
+        ]
+    }
+
+viewNav : Html Msg
+viewNav =
+    div [ class "row" ]
+        [ nav []
+            [ div [ class "nav-wrapper" ]
+                [ div [ classList [ ( "col", True ), ( "s12", True ) ] ]
+                    [ a [ href "/", class "brand-logo" ] [ text "ODK" ]
+                    , ul
+                        [ id "nav-mobile"
+                        , classList
+                            [ ( "right", True ), ( "hide-on-med-and-down", True ) ]
+                        ]
+                        [ li [] [ a [ href "/demo" ] [ text "Demo" ] ] ]
+                    ]
+                ]
             ]
-        , ul [] (viewMemo model.memos)
         ]
 
 
-htmlFunc : Int -> String -> Html Msg
-htmlFunc i memo =
-    li [ onClick (Done i) ] [ text memo ]
-
-
-viewMemo : List String -> List (Html Msg)
-viewMemo =
-    List.indexedMap htmlFunc
+viewLink : String -> Html msg
+viewLink path =
+  li [] [ a [ href path ] [ text path ] ]
