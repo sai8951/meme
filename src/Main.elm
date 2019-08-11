@@ -6,6 +6,7 @@ import Url
 import Url.Parser as Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, string, top)
 import Page.Biography as Bio
 import Page.Links as Links
+import Page.Contact as Contact
 
 
 -- MAIN
@@ -39,7 +40,7 @@ type Page
   | Gallery
   | Biography Bio.Model
   | Links Links.Model
-  | Contact
+  | Contact Contact.Model
   | NotFound
 
 
@@ -57,6 +58,7 @@ type Msg
   | UrlChanged Url.Url
   | BiographyMsg Bio.Msg
   | LinksMsg Links.Msg
+  | ContactMsg Contact.Msg
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -77,6 +79,9 @@ update msg model =
       ( model, Cmd.none )
     
     LinksMsg _ ->
+      ( model, Cmd.none)
+    
+    ContactMsg _ ->
       ( model, Cmd.none)
 
 
@@ -108,7 +113,8 @@ viewNav model =
         [ nav []
             [ div [ class "nav-wrapper" ]
                 [ div [ classList [ ( "col", True ), ( "s12", True ) ] ]
-                    [ a [ href "#", attribute "data-target" "for-mobile",  class "sidenav-trigger" ] [ i [ class "material-icons" ] [ text "menu" ] ]
+                    [ a [ href "/", class "brand-logo" ] [ text "Sai's Portfolio" ]
+                      , a [ href "#", attribute "data-target" "for-mobile",  class "sidenav-trigger" ] [ i [ class "material-icons" ] [ text "menu" ] ]
                       , ul
                           [ id "nav-mobile"
                           , classList
@@ -134,7 +140,10 @@ showMenu page =
             Links _ -> [ class "active" ]
             _ -> []
           ) [ a [ href "/meme/links" ] [ text "Links" ] ]
-    , li (if page == Contact then [ class "active" ] else []) [ a [ href "/meme/contact" ] [ text "Contact" ] ]
+    , li (case page of
+            Contact _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ href "/meme/contact" ] [ text "Contact" ] ]
                 ]
 
 viewPage : Model -> Html Msg
@@ -152,8 +161,8 @@ viewPage { url, page } =
         Links model ->
             Html.map LinksMsg (Links.view model)
         
-        Contact ->
-            text "Contact."
+        Contact model ->
+            Html.map ContactMsg (Contact.view model)
 
         NotFound ->
             text <| Url.toString url ++ " was not found. "
@@ -169,7 +178,7 @@ stepUrl model =
                 , map ( { model | page = Gallery }, Cmd.none ) (s "meme" </> s "gallery")
                 , map ( { model | page = Biography {} }, Cmd.none ) (s "meme" </> s "biography")
                 , map ( { model | page = Links {} }, Cmd.none ) (s "meme" </> s "links")
-                , map ( { model | page = Contact }, Cmd.none ) (s "meme" </> s "contact")
+                , map ( { model | page = Contact {} }, Cmd.none ) (s "meme" </> s "contact")
                 ]
     in
     Parser.parse parser model.url
