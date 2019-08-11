@@ -6375,6 +6375,7 @@ var author$project$Page$Biography$view = function (model) {
 					]))
 			]));
 };
+var elm$html$Html$Attributes$target = elm$html$Html$Attributes$stringProperty('target');
 var author$project$Page$Links$viewLinksList = F3(
 	function (sns, name, url) {
 		return A2(
@@ -6412,7 +6413,8 @@ var author$project$Page$Links$viewLinksList = F3(
 									elm$html$Html$a,
 									_List_fromArray(
 										[
-											elm$html$Html$Attributes$href(url)
+											elm$html$Html$Attributes$href(url),
+											elm$html$Html$Attributes$target('_blank')
 										]),
 									_List_fromArray(
 										[
