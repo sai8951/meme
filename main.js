@@ -4344,7 +4344,9 @@ var author$project$Main$Biography = function (a) {
 var author$project$Main$Contact = {$: 'Contact'};
 var author$project$Main$Gallery = {$: 'Gallery'};
 var author$project$Main$Home = {$: 'Home'};
-var author$project$Main$Links = {$: 'Links'};
+var author$project$Main$Links = function (a) {
+	return {$: 'Links', a: a};
+};
 var elm$core$Basics$apR = F2(
 	function (x, f) {
 		return f(x);
@@ -5693,7 +5695,10 @@ var author$project$Main$stepUrl = function (model) {
 				_Utils_Tuple2(
 					_Utils_update(
 						model,
-						{page: author$project$Main$Links}),
+						{
+							page: author$project$Main$Links(
+								{})
+						}),
 					elm$core$Platform$Cmd$none),
 				A2(
 					elm$url$Url$Parser$slash,
@@ -6042,6 +6047,8 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{url: url}));
+			case 'BiographyMsg':
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 			default:
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 		}
@@ -6133,10 +6140,16 @@ var author$project$Main$showMenu = function (page) {
 				])),
 			A2(
 			elm$html$Html$li,
-			_Utils_eq(page, author$project$Main$Links) ? _List_fromArray(
-				[
-					elm$html$Html$Attributes$class('active')
-				]) : _List_Nil,
+			function () {
+				if (page.$ === 'Links') {
+					return _List_fromArray(
+						[
+							elm$html$Html$Attributes$class('active')
+						]);
+				} else {
+					return _List_Nil;
+				}
+			}(),
 			_List_fromArray(
 				[
 					A2(
@@ -6294,6 +6307,9 @@ var author$project$Main$viewNav = function (model) {
 var author$project$Main$BiographyMsg = function (a) {
 	return {$: 'BiographyMsg', a: a};
 };
+var author$project$Main$LinksMsg = function (a) {
+	return {$: 'LinksMsg', a: a};
+};
 var author$project$Page$Biography$viewBioList = F2(
 	function (date, exhibition) {
 		return A2(
@@ -6305,7 +6321,7 @@ var author$project$Page$Biography$viewBioList = F2(
 					elm$html$Html$div,
 					_List_fromArray(
 						[
-							elm$html$Html$Attributes$class('row')
+							elm$html$Html$Attributes$class('row underline')
 						]),
 					_List_fromArray(
 						[
@@ -6359,6 +6375,80 @@ var author$project$Page$Biography$view = function (model) {
 					]))
 			]));
 };
+var author$project$Page$Links$viewLinksList = F3(
+	function (sns, name, url) {
+		return A2(
+			elm$html$Html$li,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$div,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('row underline')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col s2')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text(sns)
+								])),
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col s6')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									elm$html$Html$a,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$href(url)
+										]),
+									_List_fromArray(
+										[
+											elm$html$Html$text(name)
+										]))
+								]))
+						]))
+				]));
+	});
+var author$project$Page$Links$view = function (model) {
+	return A2(
+		elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A2(
+				elm$html$Html$h5,
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text('Links')
+					])),
+				A2(
+				elm$html$Html$ul,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A3(author$project$Page$Links$viewLinksList, 'Twitter :', 'sai_e1113', 'https://twitter.com/sai_e1113'),
+						A3(author$project$Page$Links$viewLinksList, 'Instagram :', 'saitou_sai', 'https://www.instagram.com/saitou_sai/'),
+						A3(author$project$Page$Links$viewLinksList, 'pixiv :', '斎藤さい', 'https://www.pixiv.net/member.php?id=2718132'),
+						A3(author$project$Page$Links$viewLinksList, 'deviantArt :', 'sai-wind', 'https://www.deviantart.com/sai-wind'),
+						A3(author$project$Page$Links$viewLinksList, 'ShareArt :', '斎藤さい', 'https://say-iw.share-art.jp/user/views'),
+						A3(author$project$Page$Links$viewLinksList, 'Behance :', 'Sai Saitou', 'https://www.behance.net/sai8951')
+					]))
+			]));
+};
 var elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
 var elm$html$Html$map = elm$virtual_dom$VirtualDom$map;
 var author$project$Main$viewPage = function (_n0) {
@@ -6376,7 +6466,11 @@ var author$project$Main$viewPage = function (_n0) {
 				author$project$Main$BiographyMsg,
 				author$project$Page$Biography$view(model));
 		case 'Links':
-			return elm$html$Html$text('Link.');
+			var model = page.a;
+			return A2(
+				elm$html$Html$map,
+				author$project$Main$LinksMsg,
+				author$project$Page$Links$view(model));
 		case 'Contact':
 			return elm$html$Html$text('Contact.');
 		default:
