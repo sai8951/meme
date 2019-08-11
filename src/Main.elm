@@ -5,6 +5,7 @@ import Html.Attributes exposing (..)
 import Url
 import Url.Parser as Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, string, top)
 import Page.Biography as Bio
+import Page.Links as Links
 
 
 -- MAIN
@@ -37,7 +38,7 @@ type Page
   = Home
   | Gallery
   | Biography Bio.Model
-  | Links
+  | Links Links.Model
   | Contact
   | NotFound
 
@@ -55,6 +56,7 @@ type Msg
   = LinkClicked Browser.UrlRequest
   | UrlChanged Url.Url
   | BiographyMsg Bio.Msg
+  | LinksMsg Links.Msg
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -73,6 +75,9 @@ update msg model =
     
     BiographyMsg _ ->
       ( model, Cmd.none )
+    
+    LinksMsg _ ->
+      ( model, Cmd.none)
 
 
 
@@ -125,7 +130,10 @@ showMenu page =
             Biography _ -> [ class "active" ]
             _ -> []
           ) [ a [ href "/meme/biography" ] [ text "Biography" ] ]
-    , li (if page == Links then [ class "active" ] else []) [ a [ href "/meme/links" ] [ text "Links" ] ]
+    , li (case page of
+            Links _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ href "/meme/links" ] [ text "Links" ] ]
     , li (if page == Contact then [ class "active" ] else []) [ a [ href "/meme/contact" ] [ text "Contact" ] ]
                 ]
 
@@ -141,8 +149,8 @@ viewPage { url, page } =
         Biography model ->
             Html.map BiographyMsg (Bio.view model)
         
-        Links ->
-            text "Link."
+        Links model ->
+            Html.map LinksMsg (Links.view model)
         
         Contact ->
             text "Contact."
@@ -160,7 +168,7 @@ stepUrl model =
                 , map ( { model | page = Home }, Cmd.none ) (s "meme")
                 , map ( { model | page = Gallery }, Cmd.none ) (s "meme" </> s "gallery")
                 , map ( { model | page = Biography {} }, Cmd.none ) (s "meme" </> s "biography")
-                , map ( { model | page = Links }, Cmd.none ) (s "meme" </> s "links")
+                , map ( { model | page = Links {} }, Cmd.none ) (s "meme" </> s "links")
                 , map ( { model | page = Contact }, Cmd.none ) (s "meme" </> s "contact")
                 ]
     in
