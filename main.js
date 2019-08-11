@@ -4338,7 +4338,9 @@ var author$project$Main$Model = F3(
 		return {key: key, page: page, url: url};
 	});
 var author$project$Main$NotFound = {$: 'NotFound'};
-var author$project$Main$Biography = {$: 'Biography'};
+var author$project$Main$Biography = function (a) {
+	return {$: 'Biography', a: a};
+};
 var author$project$Main$Contact = {$: 'Contact'};
 var author$project$Main$Gallery = {$: 'Gallery'};
 var author$project$Main$Home = {$: 'Home'};
@@ -5677,7 +5679,10 @@ var author$project$Main$stepUrl = function (model) {
 				_Utils_Tuple2(
 					_Utils_update(
 						model,
-						{page: author$project$Main$Biography}),
+						{
+							page: author$project$Main$Biography(
+								{})
+						}),
 					elm$core$Platform$Cmd$none),
 				A2(
 					elm$url$Url$Parser$slash,
@@ -6014,28 +6019,31 @@ var elm$url$Url$toString = function (url) {
 };
 var author$project$Main$update = F2(
 	function (msg, model) {
-		if (msg.$ === 'LinkClicked') {
-			var urlRequest = msg.a;
-			if (urlRequest.$ === 'Internal') {
-				var url = urlRequest.a;
-				return _Utils_Tuple2(
-					model,
-					A2(
-						elm$browser$Browser$Navigation$pushUrl,
-						model.key,
-						elm$url$Url$toString(url)));
-			} else {
-				var href = urlRequest.a;
-				return _Utils_Tuple2(
-					model,
-					elm$browser$Browser$Navigation$load(href));
-			}
-		} else {
-			var url = msg.a;
-			return author$project$Main$stepUrl(
-				_Utils_update(
-					model,
-					{url: url}));
+		switch (msg.$) {
+			case 'LinkClicked':
+				var urlRequest = msg.a;
+				if (urlRequest.$ === 'Internal') {
+					var url = urlRequest.a;
+					return _Utils_Tuple2(
+						model,
+						A2(
+							elm$browser$Browser$Navigation$pushUrl,
+							model.key,
+							elm$url$Url$toString(url)));
+				} else {
+					var href = urlRequest.a;
+					return _Utils_Tuple2(
+						model,
+						elm$browser$Browser$Navigation$load(href));
+				}
+			case 'UrlChanged':
+				var url = msg.a;
+				return author$project$Main$stepUrl(
+					_Utils_update(
+						model,
+						{url: url}));
+			default:
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 		}
 	});
 var elm$html$Html$a = _VirtualDom_node('a');
@@ -6100,10 +6108,16 @@ var author$project$Main$showMenu = function (page) {
 				])),
 			A2(
 			elm$html$Html$li,
-			_Utils_eq(page, author$project$Main$Biography) ? _List_fromArray(
-				[
-					elm$html$Html$Attributes$class('active')
-				]) : _List_Nil,
+			function () {
+				if (page.$ === 'Biography') {
+					return _List_fromArray(
+						[
+							elm$html$Html$Attributes$class('active')
+						]);
+				} else {
+					return _List_Nil;
+				}
+			}(),
 			_List_fromArray(
 				[
 					A2(
@@ -6277,6 +6291,76 @@ var author$project$Main$viewNav = function (model) {
 				author$project$Main$showMenu(model.page))
 			]));
 };
+var author$project$Main$BiographyMsg = function (a) {
+	return {$: 'BiographyMsg', a: a};
+};
+var author$project$Page$Biography$viewBioList = F2(
+	function (date, exhibition) {
+		return A2(
+			elm$html$Html$li,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$div,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('row')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col s3')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text(date)
+								])),
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col s6')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text(exhibition)
+								]))
+						]))
+				]));
+	});
+var elm$html$Html$h5 = _VirtualDom_node('h5');
+var author$project$Page$Biography$view = function (model) {
+	return A2(
+		elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A2(
+				elm$html$Html$h5,
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text('Biography')
+					])),
+				A2(
+				elm$html$Html$ul,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A2(author$project$Page$Biography$viewBioList, '2019.6.28-7.2', 'ワインと楽しむアート展 at Gallery IYN, Osaka'),
+						A2(author$project$Page$Biography$viewBioList, '2015.12.18-23.', '+P Tokyo2 at Design Festa Gallery, Tokyo'),
+						A2(author$project$Page$Biography$viewBioList, '2015.07.31-08.02.', 'PosCo 10 at Design Festa Gallery, Tokyo'),
+						A2(author$project$Page$Biography$viewBioList, '2015.06.15-07.11.', 'Pop Japan vol.5 at Me and Art Gallery, Sydney'),
+						A2(author$project$Page$Biography$viewBioList, '2015.03.23.', 'Ph.D. in lifescience, Kyoto University')
+					]))
+			]));
+};
+var elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
+var elm$html$Html$map = elm$virtual_dom$VirtualDom$map;
 var author$project$Main$viewPage = function (_n0) {
 	var url = _n0.url;
 	var page = _n0.page;
@@ -6286,7 +6370,11 @@ var author$project$Main$viewPage = function (_n0) {
 		case 'Gallery':
 			return elm$html$Html$text('Gallery.');
 		case 'Biography':
-			return elm$html$Html$text('Bio.');
+			var model = page.a;
+			return A2(
+				elm$html$Html$map,
+				author$project$Main$BiographyMsg,
+				author$project$Page$Biography$view(model));
 		case 'Links':
 			return elm$html$Html$text('Link.');
 		case 'Contact':

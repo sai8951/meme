@@ -6,6 +6,10 @@
     color: #000000;
 }
 
+.row {
+    margin-bottom: 10px
+}
+
 nav {
     box-shadow: none;
 }
@@ -16,4 +20,8 @@ nav a {
 
 nav ul a {
     color: #000000
+}
+
+h5 {
+    margin-bottom: 1rem
 }
