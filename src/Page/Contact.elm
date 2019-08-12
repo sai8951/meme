@@ -21,7 +21,7 @@ view model =
 
 viewContactList : String -> String -> Html Msg
 viewContactList service address =
-    li [] [ div [ class "row underline" ] [ div [ class "col s2" ] [ text service ] 
-                                , div [ class "col s6" ] [text address ]
+    li [] [ div [ class "row underline" ] [ div [ class "col s2 m2 l2" ] [ text service ] 
+                                , div [ class "col s6 offset-s1 m6 l6" ] [text address ]
                                 ]
             ]
