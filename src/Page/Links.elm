@@ -26,7 +26,7 @@ view model =
 
 viewLinksList : String -> String -> String -> Html Msg
 viewLinksList sns name url =
-    li [] [ div [ class "row underline" ] [ div [ class "col s2" ] [ text sns ] 
-                                , div [ class "col s6 font-bold" ] [ a [ href url, target "_blank"] [text name ] ]
+    li [] [ div [ class "row underline" ] [ div [ class "col s6 m2 l2" ] [ text sns ] 
+                                , div [ class "col s6 m6 l6 font-bold" ] [ a [ href url, target "_blank"] [text name ] ]
                                 ]
             ]

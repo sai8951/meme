@@ -25,7 +25,7 @@ view model =
 
 viewBioList : String -> String -> Html Msg
 viewBioList date exhibition =
-    li [] [ div [ class "row underline" ] [ div [ class "col s3" ] [ text date ] 
-                                , div [ class "col s6" ] [ text exhibition ]
+    li [] [ div [ class "row underline" ] [ div [ class "col s3 m3 l3" ] [ text date ] 
+                                , div [ class "col s8 offset-s1 m6 l6" ] [ text exhibition ]
                                 ]
             ]

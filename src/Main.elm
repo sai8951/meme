@@ -113,7 +113,7 @@ viewNav model =
         [ nav []
             [ div [ class "nav-wrapper" ]
                 [ div [ classList [ ( "col", True ), ( "s12", True ) ] ]
-                    [ a [ href "/", class "brand-logo" ] [ text "Sai's Portfolio" ]
+                    [ a [ href "/meme", class "brand-logo" ] [ text "Sai's Portfolio" ]
                       , a [ href "#", attribute "data-target" "for-mobile",  class "sidenav-trigger" ] [ i [ class "material-icons" ] [ text "menu" ] ]
                       , ul
                           [ id "nav-mobile"

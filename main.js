@@ -6274,7 +6274,7 @@ var author$project$Main$viewNav = function (model) {
 										elm$html$Html$a,
 										_List_fromArray(
 											[
-												elm$html$Html$Attributes$href('/'),
+												elm$html$Html$Attributes$href('/meme'),
 												elm$html$Html$Attributes$class('brand-logo')
 											]),
 										_List_fromArray(
@@ -6356,7 +6356,7 @@ var author$project$Page$Biography$viewBioList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s3')
+									elm$html$Html$Attributes$class('col s3 m3 l3')
 								]),
 							_List_fromArray(
 								[
@@ -6366,7 +6366,7 @@ var author$project$Page$Biography$viewBioList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s6')
+									elm$html$Html$Attributes$class('col s8 offset-s1 m6 l6')
 								]),
 							_List_fromArray(
 								[
@@ -6421,7 +6421,7 @@ var author$project$Page$Contact$viewContactList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s2')
+									elm$html$Html$Attributes$class('col s2 m2 l2')
 								]),
 							_List_fromArray(
 								[
@@ -6431,7 +6431,7 @@ var author$project$Page$Contact$viewContactList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s6')
+									elm$html$Html$Attributes$class('col s6 offset-s1 m6 l6')
 								]),
 							_List_fromArray(
 								[
@@ -6482,7 +6482,7 @@ var author$project$Page$Links$viewLinksList = F3(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s2')
+									elm$html$Html$Attributes$class('col s6 m2 l2')
 								]),
 							_List_fromArray(
 								[
@@ -6492,7 +6492,7 @@ var author$project$Page$Links$viewLinksList = F3(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s6 font-bold')
+									elm$html$Html$Attributes$class('col s6 m6 l6 font-bold')
 								]),
 							_List_fromArray(
 								[
