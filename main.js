@@ -6094,6 +6094,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
+							elm$html$Html$Attributes$class('sidenav-close'),
 							elm$html$Html$Attributes$href('/meme')
 						]),
 					_List_fromArray(
@@ -6113,6 +6114,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
+							elm$html$Html$Attributes$class('sidenav-close'),
 							elm$html$Html$Attributes$href('/meme/gallery')
 						]),
 					_List_fromArray(
@@ -6138,6 +6140,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
+							elm$html$Html$Attributes$class('sidenav-close'),
 							elm$html$Html$Attributes$href('/meme/biography')
 						]),
 					_List_fromArray(
@@ -6163,6 +6166,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
+							elm$html$Html$Attributes$class('sidenav-close'),
 							elm$html$Html$Attributes$href('/meme/links')
 						]),
 					_List_fromArray(
@@ -6188,6 +6192,7 @@ var author$project$Main$showMenu = function (page) {
 					elm$html$Html$a,
 					_List_fromArray(
 						[
+							elm$html$Html$Attributes$class('sidenav-close'),
 							elm$html$Html$Attributes$href('/meme/contact')
 						]),
 					_List_fromArray(
@@ -6421,7 +6426,7 @@ var author$project$Page$Contact$viewContactList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s3 m2 l2')
+									elm$html$Html$Attributes$class('col s4 m2 l2')
 								]),
 							_List_fromArray(
 								[
@@ -6431,7 +6436,7 @@ var author$project$Page$Contact$viewContactList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s8 offset-s1 m6 l6')
+									elm$html$Html$Attributes$class('col s7 m6 l6')
 								]),
 							_List_fromArray(
 								[

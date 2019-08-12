@@ -130,20 +130,20 @@ viewNav model =
 
 showMenu : Page -> List (Html msg)
 showMenu page =
-  [  li (if page == Home then [ class "active" ] else []) [ a [ href "/meme" ] [ text "Home" ] ]
-    , li (if page == Gallery then [ class "active" ] else []) [ a [ href "/meme/gallery" ] [ text "Gallery" ] ]
+  [  li (if page == Home then [ class "active" ] else []) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
+    , li (if page == Gallery then [ class "active" ] else []) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
     , li (case page of
             Biography _ -> [ class "active" ]
             _ -> []
-          ) [ a [ href "/meme/biography" ] [ text "Biography" ] ]
+          ) [ a [ class "sidenav-close", href "/meme/biography" ] [ text "Biography" ] ]
     , li (case page of
             Links _ -> [ class "active" ]
             _ -> []
-          ) [ a [ href "/meme/links" ] [ text "Links" ] ]
+          ) [ a [ class "sidenav-close", href "/meme/links" ] [ text "Links" ] ]
     , li (case page of
             Contact _ -> [ class "active" ]
             _ -> []
-          ) [ a [ href "/meme/contact" ] [ text "Contact" ] ]
+          ) [ a [ class "sidenav-close", href "/meme/contact" ] [ text "Contact" ] ]
                 ]
 
 viewPage : Model -> Html Msg
