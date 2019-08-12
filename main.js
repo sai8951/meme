@@ -6492,7 +6492,7 @@ var author$project$Page$Links$viewLinksList = F3(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s6')
+									elm$html$Html$Attributes$class('col s6 font-bold')
 								]),
 							_List_fromArray(
 								[
