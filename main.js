@@ -6421,7 +6421,7 @@ var author$project$Page$Contact$viewContactList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s2 m2 l2')
+									elm$html$Html$Attributes$class('col s3 m2 l2')
 								]),
 							_List_fromArray(
 								[
@@ -6431,7 +6431,7 @@ var author$project$Page$Contact$viewContactList = F2(
 							elm$html$Html$div,
 							_List_fromArray(
 								[
-									elm$html$Html$Attributes$class('col s6 offset-s1 m6 l6')
+									elm$html$Html$Attributes$class('col s8 offset-s1 m6 l6')
 								]),
 							_List_fromArray(
 								[
