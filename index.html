@@ -16,15 +16,23 @@
   <script src="main.js"></script>
 </head>
 <body>
-  <script>var app = Elm.Main.init();
-    document.addEventListener('DOMContentLoaded', function() {
+  <script>
+  var app = Elm.Main.init();
+
+  document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
-  });</script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.materialboxed');
-    var instances = M.Materialbox.init(elems, options);
-  });</script>
+  });
+
+  var url = null;
+  setInterval(function () {
+    if (location.href.split("#")[0] == url) {
+      return;
+    }
+    url = location.href.split("#")[0];
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  }, 1000);
+  </script>
 </body>
 </html>
