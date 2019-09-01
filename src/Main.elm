@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Url
 import Url.Parser as Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, string, top)
+import Page.Gallery as Gallery
 import Page.Biography as Bio
 import Page.Links as Links
 import Page.Contact as Contact
@@ -37,7 +38,7 @@ type alias Model =
 
 type Page
   = Home
-  | Gallery
+  | Gallery Gallery.Model
   | Biography Bio.Model
   | Links Links.Model
   | Contact Contact.Model
@@ -56,6 +57,7 @@ init flags url key =
 type Msg
   = LinkClicked Browser.UrlRequest
   | UrlChanged Url.Url
+  | GalleryMsg Gallery.Msg
   | BiographyMsg Bio.Msg
   | LinksMsg Links.Msg
   | ContactMsg Contact.Msg
@@ -75,6 +77,9 @@ update msg model =
     UrlChanged url ->
       stepUrl { model | url = url }
     
+    GalleryMsg _ ->
+      ( model, Cmd.none)
+
     BiographyMsg _ ->
       ( model, Cmd.none )
     
@@ -131,7 +136,10 @@ viewNav model =
 showMenu : Page -> List (Html msg)
 showMenu page =
   [  li (if page == Home then [ class "active" ] else []) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
-    , li (if page == Gallery then [ class "active" ] else []) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
+    , li (case page of
+            Gallery _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
     , li (case page of
             Biography _ -> [ class "active" ]
             _ -> []
@@ -152,8 +160,8 @@ viewPage { url, page } =
         Home ->
             text "Home"
 
-        Gallery ->
-            text "Gallery."
+        Gallery model ->
+            Html.map GalleryMsg (Gallery.view model)
 
         Biography model ->
             Html.map BiographyMsg (Bio.view model)
@@ -175,7 +183,7 @@ stepUrl model =
             oneOf
                 [ map ( { model | page = Home }, Cmd.none ) top
                 , map ( { model | page = Home }, Cmd.none ) (s "meme")
-                , map ( { model | page = Gallery }, Cmd.none ) (s "meme" </> s "gallery")
+                , map ( { model | page = Gallery {} }, Cmd.none ) (s "meme" </> s "gallery")
                 , map ( { model | page = Biography {} }, Cmd.none ) (s "meme" </> s "biography")
                 , map ( { model | page = Links {} }, Cmd.none ) (s "meme" </> s "links")
                 , map ( { model | page = Contact {} }, Cmd.none ) (s "meme" </> s "contact")

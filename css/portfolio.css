@@ -51,3 +51,28 @@ nav ul a {
 h5 {
     margin-bottom: 1rem
 }
+
+.modal.modal-fixed-footer {
+    top: 1% !important;
+    height: 98%;
+    width: 80%;
+    max-height: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .modal.modal-fixed-footer {
+        top: 20% !important;
+        height: 50%;
+    }
+}
+
+.modal.modal-fixed-footer .modal-content {
+    overflow-y: hidden;
+}
+
+.image-in-modal {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
