@@ -6489,101 +6489,101 @@ var author$project$Page$Gallery$Image = F4(
 	});
 var author$project$Page$Gallery$images2012 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2012-01', '../../pics/2012/MJとこの海mini.png', '../../pics/2012/MJとこの海.png', 'metempsychosis'),
-		A4(author$project$Page$Gallery$Image, '2012-02', '../../pics/2012/冬mini.png', '../../pics/2012/冬.png', 'winter'),
-		A4(author$project$Page$Gallery$Image, '2012-03', '../../pics/2012/吐きたい2mini.png', '../../pics/2012/吐きたい2.png', 'vomit'),
-		A4(author$project$Page$Gallery$Image, '2012-04', '../../pics/2012/均質mini.png', '../../pics/2012/均質.png', '均質は美徳か_homogeneity'),
-		A4(author$project$Page$Gallery$Image, '2012-05', '../../pics/2012/思いっきりmini.png', '../../pics/2012/思いっきり.png', '思いっきり'),
-		A4(author$project$Page$Gallery$Image, '2012-06', '../../pics/2012/勉強嫌mini.png', '../../pics/2012/勉強嫌.png', '勉強嫌'),
-		A4(author$project$Page$Gallery$Image, '2012-07', '../../pics/2012/没個性と記号の値段mini.png', '../../pics/2012/没個性と記号の値段.png', '没個性と記号の値段'),
-		A4(author$project$Page$Gallery$Image, '2012-08', '../../pics/2012/表層mini.png', '../../pics/2012/表層.png', '表層'),
-		A4(author$project$Page$Gallery$Image, '2012-09', '../../pics/2012/小悪魔mini.jpg', '../../pics/2012/小悪魔.jpg', '小悪魔'),
-		A4(author$project$Page$Gallery$Image, '2012-10', '../../pics/2012/プロングホーンmini.png', '../../pics/2012/プロングホーン.png', 'Pronghorn'),
-		A4(author$project$Page$Gallery$Image, '2012-11', '../../pics/2012/hmmemini.png', '../../pics/2012/hmme.png', 'No title'),
-		A4(author$project$Page$Gallery$Image, '2012-12', '../../pics/2012/depressmini.png', '../../pics/2012/depress.png', 'hate me'),
-		A4(author$project$Page$Gallery$Image, '2012-13', '../../pics/2012/巳01mini.png', '../../pics/2012/巳01.png', '巳01'),
-		A4(author$project$Page$Gallery$Image, '2012-14', '../../pics/2012/巳02mini.png', '../../pics/2012/巳02.png', '巳02'),
-		A4(author$project$Page$Gallery$Image, '2012-15', '../../pics/2012/ヘビゲッティmini.png', '../../pics/2012/ヘビゲッティ.png', 'ヘビゲッティ')
+		A4(author$project$Page$Gallery$Image, '2012-01', 'pics/2012/MJとこの海mini.png', 'pics/2012/MJとこの海.png', 'metempsychosis'),
+		A4(author$project$Page$Gallery$Image, '2012-02', 'pics/2012/冬mini.png', 'pics/2012/冬.png', 'winter'),
+		A4(author$project$Page$Gallery$Image, '2012-03', 'pics/2012/吐きたい2mini.png', 'pics/2012/吐きたい2.png', 'vomit'),
+		A4(author$project$Page$Gallery$Image, '2012-04', 'pics/2012/均質mini.png', 'pics/2012/均質.png', '均質は美徳か_homogeneity'),
+		A4(author$project$Page$Gallery$Image, '2012-05', 'pics/2012/思いっきりmini.png', 'pics/2012/思いっきり.png', '思いっきり'),
+		A4(author$project$Page$Gallery$Image, '2012-06', 'pics/2012/勉強嫌mini.png', 'pics/2012/勉強嫌.png', '勉強嫌'),
+		A4(author$project$Page$Gallery$Image, '2012-07', 'pics/2012/没個性と記号の値段mini.png', 'pics/2012/没個性と記号の値段.png', '没個性と記号の値段'),
+		A4(author$project$Page$Gallery$Image, '2012-08', 'pics/2012/表層mini.png', 'pics/2012/表層.png', '表層'),
+		A4(author$project$Page$Gallery$Image, '2012-09', 'pics/2012/小悪魔mini.jpg', 'pics/2012/小悪魔.jpg', '小悪魔'),
+		A4(author$project$Page$Gallery$Image, '2012-10', 'pics/2012/プロングホーンmini.png', 'pics/2012/プロングホーン.png', 'Pronghorn'),
+		A4(author$project$Page$Gallery$Image, '2012-11', 'pics/2012/hmmemini.png', 'pics/2012/hmme.png', 'No title'),
+		A4(author$project$Page$Gallery$Image, '2012-12', 'pics/2012/depressmini.png', 'pics/2012/depress.png', 'hate me'),
+		A4(author$project$Page$Gallery$Image, '2012-13', 'pics/2012/巳01mini.png', 'pics/2012/巳01.png', '巳01'),
+		A4(author$project$Page$Gallery$Image, '2012-14', 'pics/2012/巳02mini.png', 'pics/2012/巳02.png', '巳02'),
+		A4(author$project$Page$Gallery$Image, '2012-15', 'pics/2012/ヘビゲッティmini.png', 'pics/2012/ヘビゲッティ.png', 'ヘビゲッティ')
 	]);
 var author$project$Page$Gallery$images2013 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2013-01', '../../pics/2013/御手洗団子mini.png', '../../pics/2013/御手洗団子.png', 'みたらし団子'),
-		A4(author$project$Page$Gallery$Image, '2013-02', '../../pics/2013/心に触れるmini.png', '../../pics/2013/心に触れる.png', '心に触れる'),
-		A4(author$project$Page$Gallery$Image, '2013-03', '../../pics/2013/hystericgirlsmini.png', '../../pics/2013/hystericgirls.png', 'hysteric school girls'),
-		A4(author$project$Page$Gallery$Image, '2013-04', '../../pics/2013/blueeyesmini.png', '../../pics/2013/blueeyes.png', 'blue eyes'),
-		A4(author$project$Page$Gallery$Image, '2013-05', '../../pics/2013/究極の透明感のある肌mini.png', '../../pics/2013/究極の透明感のある肌.png', '究極の透明感のある肌'),
-		A4(author$project$Page$Gallery$Image, '2013-06', '../../pics/2013/伝達mini.png', '../../pics/2013/伝達.png', '伝達'),
-		A4(author$project$Page$Gallery$Image, '2013-07', '../../pics/2013/almondogmini.png', '../../pics/2013/almondog.png', 'アーモンドプードル_Almondog'),
-		A4(author$project$Page$Gallery$Image, '2013-08', '../../pics/2013/あはは楽しいmini.png', '../../pics/2013/あはは楽しい.png', 'あはは楽しい_FEEL SO GOOD!'),
-		A4(author$project$Page$Gallery$Image, '2013-09', '../../pics/2013/NoFacemini.png', '../../pics/2013/NoFace.png', '・・・・・誰？'),
-		A4(author$project$Page$Gallery$Image, '2013-10', '../../pics/2013/smilingmini.png', '../../pics/2013/smiling.png', 'No title'),
-		A4(author$project$Page$Gallery$Image, '2013-11', '../../pics/2013/試用目隠しカバー13_dAmini.png', '../../pics/2013/試用目隠しカバー13_dA.png', '積怨'),
-		A4(author$project$Page$Gallery$Image, '2013-12', '../../pics/2013/automatismmini.png', '../../pics/2013/automatism.png', 'automatism'),
-		A4(author$project$Page$Gallery$Image, '2013-13', '../../pics/2013/automatism2mini.png', '../../pics/2013/automatism2.png', 'automatism2'),
-		A4(author$project$Page$Gallery$Image, '2013-14', '../../pics/2013/lip_needlemini.png', '../../pics/2013/lip_needle.png', 'needle'),
-		A4(author$project$Page$Gallery$Image, '2013-15', '../../pics/2013/見せないmini.png', '../../pics/2013/見せない.png', 'No title'),
-		A4(author$project$Page$Gallery$Image, '2013-16', '../../pics/2013/infantmini.png', '../../pics/2013/infant.png', 'Like an infant'),
-		A4(author$project$Page$Gallery$Image, '2013-17', '../../pics/2013/cuttermini.png', '../../pics/2013/cutter.png', 'dissociation'),
-		A4(author$project$Page$Gallery$Image, '2013-18', '../../pics/2013/幸せのかたちmini.png', '../../pics/2013/幸せのかたち.png', '幸せのかたち'),
-		A4(author$project$Page$Gallery$Image, '2013-19', '../../pics/2013/BUfKX62CIAAnHLLmini.png', '../../pics/2013/BUfKX62CIAAnHLL.png', 'No tilte'),
-		A4(author$project$Page$Gallery$Image, '2013-20', '../../pics/2013/researchermini.png', '../../pics/2013/researcher.png', 'researcher'),
-		A4(author$project$Page$Gallery$Image, '2013-21', '../../pics/2013/hangmini.png', '../../pics/2013/hang.png', 'hang'),
-		A4(author$project$Page$Gallery$Image, '2013-22', '../../pics/2013/sciencemini.jpg', '../../pics/2013/science.jpg', 'science'),
-		A4(author$project$Page$Gallery$Image, '2013-23', '../../pics/2013/lastscenemini.png', '../../pics/2013/lastscene.png', '最期に見た光景'),
-		A4(author$project$Page$Gallery$Image, '2013-24', '../../pics/2013/handsmini.png', '../../pics/2013/hands.png', 'hands'),
-		A4(author$project$Page$Gallery$Image, '2013-25', '../../pics/2013/2014NewYearmini.jpg', '../../pics/2013/2014NewYear.jpg', '午年')
+		A4(author$project$Page$Gallery$Image, '2013-01', 'pics/2013/御手洗団子mini.png', 'pics/2013/御手洗団子.png', 'みたらし団子'),
+		A4(author$project$Page$Gallery$Image, '2013-02', 'pics/2013/心に触れるmini.png', 'pics/2013/心に触れる.png', '心に触れる'),
+		A4(author$project$Page$Gallery$Image, '2013-03', 'pics/2013/hystericgirlsmini.png', 'pics/2013/hystericgirls.png', 'hysteric school girls'),
+		A4(author$project$Page$Gallery$Image, '2013-04', 'pics/2013/blueeyesmini.png', 'pics/2013/blueeyes.png', 'blue eyes'),
+		A4(author$project$Page$Gallery$Image, '2013-05', 'pics/2013/究極の透明感のある肌mini.png', 'pics/2013/究極の透明感のある肌.png', '究極の透明感のある肌'),
+		A4(author$project$Page$Gallery$Image, '2013-06', 'pics/2013/伝達mini.png', 'pics/2013/伝達.png', '伝達'),
+		A4(author$project$Page$Gallery$Image, '2013-07', 'pics/2013/almondogmini.png', 'pics/2013/almondog.png', 'アーモンドプードル_Almondog'),
+		A4(author$project$Page$Gallery$Image, '2013-08', 'pics/2013/あはは楽しいmini.png', 'pics/2013/あはは楽しい.png', 'あはは楽しい_FEEL SO GOOD!'),
+		A4(author$project$Page$Gallery$Image, '2013-09', 'pics/2013/NoFacemini.png', 'pics/2013/NoFace.png', '・・・・・誰？'),
+		A4(author$project$Page$Gallery$Image, '2013-10', 'pics/2013/smilingmini.png', 'pics/2013/smiling.png', 'No title'),
+		A4(author$project$Page$Gallery$Image, '2013-11', 'pics/2013/試用目隠しカバー13_dAmini.png', 'pics/2013/試用目隠しカバー13_dA.png', '積怨'),
+		A4(author$project$Page$Gallery$Image, '2013-12', 'pics/2013/automatismmini.png', 'pics/2013/automatism.png', 'automatism'),
+		A4(author$project$Page$Gallery$Image, '2013-13', 'pics/2013/automatism2mini.png', 'pics/2013/automatism2.png', 'automatism2'),
+		A4(author$project$Page$Gallery$Image, '2013-14', 'pics/2013/lip_needlemini.png', 'pics/2013/lip_needle.png', 'needle'),
+		A4(author$project$Page$Gallery$Image, '2013-15', 'pics/2013/見せないmini.png', 'pics/2013/見せない.png', 'No title'),
+		A4(author$project$Page$Gallery$Image, '2013-16', 'pics/2013/infantmini.png', 'pics/2013/infant.png', 'Like an infant'),
+		A4(author$project$Page$Gallery$Image, '2013-17', 'pics/2013/cuttermini.png', 'pics/2013/cutter.png', 'dissociation'),
+		A4(author$project$Page$Gallery$Image, '2013-18', 'pics/2013/幸せのかたちmini.png', 'pics/2013/幸せのかたち.png', '幸せのかたち'),
+		A4(author$project$Page$Gallery$Image, '2013-19', 'pics/2013/BUfKX62CIAAnHLLmini.png', 'pics/2013/BUfKX62CIAAnHLL.png', 'No tilte'),
+		A4(author$project$Page$Gallery$Image, '2013-20', 'pics/2013/researchermini.png', 'pics/2013/researcher.png', 'researcher'),
+		A4(author$project$Page$Gallery$Image, '2013-21', 'pics/2013/hangmini.png', 'pics/2013/hang.png', 'hang'),
+		A4(author$project$Page$Gallery$Image, '2013-22', 'pics/2013/sciencemini.jpg', 'pics/2013/science.jpg', 'science'),
+		A4(author$project$Page$Gallery$Image, '2013-23', 'pics/2013/lastscenemini.png', 'pics/2013/lastscene.png', '最期に見た光景'),
+		A4(author$project$Page$Gallery$Image, '2013-24', 'pics/2013/handsmini.png', 'pics/2013/hands.png', 'hands'),
+		A4(author$project$Page$Gallery$Image, '2013-25', 'pics/2013/2014NewYearmini.jpg', 'pics/2013/2014NewYear.jpg', '午年')
 	]);
 var author$project$Page$Gallery$images2014 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2014-01', '../../pics/2014/suicidal ideationmini.png', '../../pics/2014/suicidal ideation.png', 'suicidal ideation'),
-		A4(author$project$Page$Gallery$Image, '2014-02', '../../pics/2014/EyeDropmini.png', '../../pics/2014/EyeDrop.png', 'EyeDrop'),
-		A4(author$project$Page$Gallery$Image, '2014-03', '../../pics/2014/花魁mini.png', '../../pics/2014/花魁.jpg', '花魁(oiran)'),
-		A4(author$project$Page$Gallery$Image, '2014-04', '../../pics/2014/三日月mini.png', '../../pics/2014/三日月.png', '三日月(crescent)'),
-		A4(author$project$Page$Gallery$Image, '2014-05', '../../pics/2014/cigarettemini.png', '../../pics/2014/cigarette.png', 'cigarette'),
-		A4(author$project$Page$Gallery$Image, '2014-06', '../../pics/2014/hall20140412mini.png', '../../pics/2014/hall20140412.png', 'hall20140412'),
-		A4(author$project$Page$Gallery$Image, '2014-07', '../../pics/2014/weeeeeemini.png', '../../pics/2014/weeeeee.png', 'weeeeee'),
-		A4(author$project$Page$Gallery$Image, '2014-08', '../../pics/2014/お昼寝mini.png', '../../pics/2014/お昼寝.png', 'お昼寝(nap)'),
-		A4(author$project$Page$Gallery$Image, '2014-09', '../../pics/2014/20140914mini.jpg', '../../pics/2014/20140914.jpg', 'Blue Murderous Intent'),
-		A4(author$project$Page$Gallery$Image, '2014-10', '../../pics/2014/DIYcompmini.jpg', '../../pics/2014/DIYcomp.jpg', 'DIY')
+		A4(author$project$Page$Gallery$Image, '2014-01', 'pics/2014/suicidal ideationmini.png', 'pics/2014/suicidal ideation.png', 'suicidal ideation'),
+		A4(author$project$Page$Gallery$Image, '2014-02', 'pics/2014/EyeDropmini.png', 'pics/2014/EyeDrop.png', 'EyeDrop'),
+		A4(author$project$Page$Gallery$Image, '2014-03', 'pics/2014/花魁mini.png', 'pics/2014/花魁.jpg', '花魁(oiran)'),
+		A4(author$project$Page$Gallery$Image, '2014-04', 'pics/2014/三日月mini.png', 'pics/2014/三日月.png', '三日月(crescent)'),
+		A4(author$project$Page$Gallery$Image, '2014-05', 'pics/2014/cigarettemini.png', 'pics/2014/cigarette.png', 'cigarette'),
+		A4(author$project$Page$Gallery$Image, '2014-06', 'pics/2014/hall20140412mini.png', 'pics/2014/hall20140412.png', 'hall20140412'),
+		A4(author$project$Page$Gallery$Image, '2014-07', 'pics/2014/weeeeeemini.png', 'pics/2014/weeeeee.png', 'weeeeee'),
+		A4(author$project$Page$Gallery$Image, '2014-08', 'pics/2014/お昼寝mini.png', 'pics/2014/お昼寝.png', 'お昼寝(nap)'),
+		A4(author$project$Page$Gallery$Image, '2014-09', 'pics/2014/20140914mini.jpg', 'pics/2014/20140914.jpg', 'Blue Murderous Intent'),
+		A4(author$project$Page$Gallery$Image, '2014-10', 'pics/2014/DIYcompmini.jpg', 'pics/2014/DIYcomp.jpg', 'DIY')
 	]);
 var author$project$Page$Gallery$images2015 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2015-01', '../../pics/2015/neckRGBmini.jpg', '../../pics/2015/neckRGB.jpg', 'neck'),
-		A4(author$project$Page$Gallery$Image, '2015-02', '../../pics/2015/MermaidMummymini.png', '../../pics/2015/MermaidMummy.png', 'Mermaid Mummy'),
-		A4(author$project$Page$Gallery$Image, '2015-03', '../../pics/2015/EarPhonemini.png', '../../pics/2015/EarPhone.png', '聴こえる...'),
-		A4(author$project$Page$Gallery$Image, '2015-04', '../../pics/2015/Demon or Demonmini.png', '../../pics/2015/Demon or Demon.png', '悪魔と悪魔'),
-		A4(author$project$Page$Gallery$Image, '2015-05', '../../pics/2015/blue and devil mini.png', '../../pics/2015/blue and devil.png', 'blue and devil'),
-		A4(author$project$Page$Gallery$Image, '2015-06', '../../pics/2015/anti-blue and devil mini.png', '../../pics/2015/anti-blue and devil.png', 'anti-blue and devil'),
-		A4(author$project$Page$Gallery$Image, '2015-07', '../../pics/2015/脳が溶け出すmini.png', '../../pics/2015/脳が溶け出す.png', '誰かがみんなの記憶と体験を回収してデータベースを作っている。')
+		A4(author$project$Page$Gallery$Image, '2015-01', 'pics/2015/neckRGBmini.jpg', 'pics/2015/neckRGB.jpg', 'neck'),
+		A4(author$project$Page$Gallery$Image, '2015-02', 'pics/2015/MermaidMummymini.png', 'pics/2015/MermaidMummy.png', 'Mermaid Mummy'),
+		A4(author$project$Page$Gallery$Image, '2015-03', 'pics/2015/EarPhonemini.png', 'pics/2015/EarPhone.png', '聴こえる...'),
+		A4(author$project$Page$Gallery$Image, '2015-04', 'pics/2015/Demon or Demonmini.png', 'pics/2015/Demon or Demon.png', '悪魔と悪魔'),
+		A4(author$project$Page$Gallery$Image, '2015-05', 'pics/2015/blue and devil mini.png', 'pics/2015/blue and devil.png', 'blue and devil'),
+		A4(author$project$Page$Gallery$Image, '2015-06', 'pics/2015/anti-blue and devil mini.png', 'pics/2015/anti-blue and devil.png', 'anti-blue and devil'),
+		A4(author$project$Page$Gallery$Image, '2015-07', 'pics/2015/脳が溶け出すmini.png', 'pics/2015/脳が溶け出す.png', '誰かがみんなの記憶と体験を回収してデータベースを作っている。')
 	]);
 var author$project$Page$Gallery$images2016 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2016-01', '../../pics/2016/羽化mini.png', '../../pics/2016/羽化.png', '羽化'),
-		A4(author$project$Page$Gallery$Image, '2016-02', '../../pics/2016/smokingRGBmini.jpg', '../../pics/2016/smokingRGB.jpg', 'smoking alone...'),
-		A4(author$project$Page$Gallery$Image, '2016-03', '../../pics/2016/noose umbrellamini.png', '../../pics/2016/noose umbrella.png', 'noose umbrella'),
-		A4(author$project$Page$Gallery$Image, '2016-04', '../../pics/2016/縁側で寝るmini.png', '../../pics/2016/縁側で寝る.png', '縁側で寝る、変な星の色。'),
-		A4(author$project$Page$Gallery$Image, '2016-05', '../../pics/2016/BTmini.png', '../../pics/2016/BT.png', 'No title'),
-		A4(author$project$Page$Gallery$Image, '2016-06', '../../pics/2016/独我論mini.jpg', '../../pics/2016/独我論.jpg', '独我論 (solipsism)')
+		A4(author$project$Page$Gallery$Image, '2016-01', 'pics/2016/羽化mini.png', 'pics/2016/羽化.png', '羽化'),
+		A4(author$project$Page$Gallery$Image, '2016-02', 'pics/2016/smokingRGBmini.jpg', 'pics/2016/smokingRGB.jpg', 'smoking alone...'),
+		A4(author$project$Page$Gallery$Image, '2016-03', 'pics/2016/noose umbrellamini.png', 'pics/2016/noose umbrella.png', 'noose umbrella'),
+		A4(author$project$Page$Gallery$Image, '2016-04', 'pics/2016/縁側で寝るmini.png', 'pics/2016/縁側で寝る.png', '縁側で寝る、変な星の色。'),
+		A4(author$project$Page$Gallery$Image, '2016-05', 'pics/2016/BTmini.png', 'pics/2016/BT.png', 'No title'),
+		A4(author$project$Page$Gallery$Image, '2016-06', 'pics/2016/独我論mini.jpg', 'pics/2016/独我論.jpg', '独我論 (solipsism)')
 	]);
 var author$project$Page$Gallery$images2017 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2017-01', '../../pics/2017/chickenYearmini.png', '../../pics/2017/chickenYear.png', '酉年の年賀状'),
-		A4(author$project$Page$Gallery$Image, '2017-02', '../../pics/2017/北枕で夢を見るmini.png', '../../pics/2017/北枕で夢を見る.png', '北枕で夢を見る')
+		A4(author$project$Page$Gallery$Image, '2017-01', 'pics/2017/chickenYearmini.png', 'pics/2017/chickenYear.png', '酉年の年賀状'),
+		A4(author$project$Page$Gallery$Image, '2017-02', 'pics/2017/北枕で夢を見るmini.png', 'pics/2017/北枕で夢を見る.png', '北枕で夢を見る')
 	]);
 var author$project$Page$Gallery$images2018 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2018-01', '../../pics/2018/食事_モノトーンmini.png', '../../pics/2018/食事_モノトーン.png', '読書')
+		A4(author$project$Page$Gallery$Image, '2018-01', 'pics/2018/食事_モノトーンmini.png', 'pics/2018/食事_モノトーン.png', '読書')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, 'b2011-01', '../../pics/~2012/愛犬pngvermini.PNG', '../../pics/~2012/愛犬pngver.PNG', 'My doggy'),
-		A4(author$project$Page$Gallery$Image, 'b2011-02', '../../pics/~2012/cell_cyclemini.png', '../../pics/~2012/cell_cycle.png', 'the cell cycle'),
-		A4(author$project$Page$Gallery$Image, 'b2011-03', '../../pics/~2012/鳥獣戯画風mini.png', '../../pics/~2012/鳥獣戯画風.png', '鳥獣戯画風01'),
-		A4(author$project$Page$Gallery$Image, 'b2011-04', '../../pics/~2012/鳥獣戯画風revmini.png', '../../pics/~2012/鳥獣戯画風rev.png', '鳥獣戯画風02'),
-		A4(author$project$Page$Gallery$Image, 'b2011-05', '../../pics/~2012/maymini.png', '../../pics/~2012/may.png', '五月晴れ'),
-		A4(author$project$Page$Gallery$Image, 'b2011-06', '../../pics/~2012/二重盲検法mini.png', '../../pics/~2012/二重盲検法.png', '二重猛犬法-double blind test-'),
-		A4(author$project$Page$Gallery$Image, 'b2011-07', '../../pics/~2012/colourmini.png', '../../pics/~2012/colour.png', 'colours'),
-		A4(author$project$Page$Gallery$Image, 'b2011-08', '../../pics/~2012/あかねさすmini.png', '../../pics/~2012/あかねさす.png', 'あかねさす')
+		A4(author$project$Page$Gallery$Image, 'b2011-01', 'pics/~2012/愛犬pngvermini.PNG', 'pics/~2012/愛犬pngver.PNG', 'My doggy'),
+		A4(author$project$Page$Gallery$Image, 'b2011-02', 'pics/~2012/cell_cyclemini.png', 'pics/~2012/cell_cycle.png', 'the cell cycle'),
+		A4(author$project$Page$Gallery$Image, 'b2011-03', 'pics/~2012/鳥獣戯画風mini.png', 'pics/~2012/鳥獣戯画風.png', '鳥獣戯画風01'),
+		A4(author$project$Page$Gallery$Image, 'b2011-04', 'pics/~2012/鳥獣戯画風revmini.png', 'pics/~2012/鳥獣戯画風rev.png', '鳥獣戯画風02'),
+		A4(author$project$Page$Gallery$Image, 'b2011-05', 'pics/~2012/maymini.png', 'pics/~2012/may.png', '五月晴れ'),
+		A4(author$project$Page$Gallery$Image, 'b2011-06', 'pics/~2012/二重盲検法mini.png', 'pics/~2012/二重盲検法.png', '二重猛犬法-double blind test-'),
+		A4(author$project$Page$Gallery$Image, 'b2011-07', 'pics/~2012/colourmini.png', 'pics/~2012/colour.png', 'colours'),
+		A4(author$project$Page$Gallery$Image, 'b2011-08', 'pics/~2012/あかねさすmini.png', 'pics/~2012/あかねさす.png', 'あかねさす')
 	]);
 var elm$html$Html$img = _VirtualDom_node('img');
 var elm$html$Html$span = _VirtualDom_node('span');
