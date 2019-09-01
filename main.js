@@ -6576,14 +6576,14 @@ var author$project$Page$Gallery$images2018 = _List_fromArray(
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, 'b2011-01', 'pics/~2012/愛犬pngvermini.PNG', 'pics/~2012/愛犬pngver.PNG', 'My doggy'),
-		A4(author$project$Page$Gallery$Image, 'b2011-02', 'pics/~2012/cell_cyclemini.png', 'pics/~2012/cell_cycle.png', 'the cell cycle'),
-		A4(author$project$Page$Gallery$Image, 'b2011-03', 'pics/~2012/鳥獣戯画風mini.png', 'pics/~2012/鳥獣戯画風.png', '鳥獣戯画風01'),
-		A4(author$project$Page$Gallery$Image, 'b2011-04', 'pics/~2012/鳥獣戯画風revmini.png', 'pics/~2012/鳥獣戯画風rev.png', '鳥獣戯画風02'),
-		A4(author$project$Page$Gallery$Image, 'b2011-05', 'pics/~2012/maymini.png', 'pics/~2012/may.png', '五月晴れ'),
-		A4(author$project$Page$Gallery$Image, 'b2011-06', 'pics/~2012/二重盲検法mini.png', 'pics/~2012/二重盲検法.png', '二重猛犬法-double blind test-'),
-		A4(author$project$Page$Gallery$Image, 'b2011-07', 'pics/~2012/colourmini.png', 'pics/~2012/colour.png', 'colours'),
-		A4(author$project$Page$Gallery$Image, 'b2011-08', 'pics/~2012/あかねさすmini.png', 'pics/~2012/あかねさす.png', 'あかねさす')
+		A4(author$project$Page$Gallery$Image, 'b2011-01', 'pics/before2012/愛犬pngvermini.PNG', 'pics/before2012/愛犬pngver.PNG', 'My doggy'),
+		A4(author$project$Page$Gallery$Image, 'b2011-02', 'pics/before2012/cell_cyclemini.png', 'pics/before2012/cell_cycle.png', 'the cell cycle'),
+		A4(author$project$Page$Gallery$Image, 'b2011-03', 'pics/before2012/鳥獣戯画風mini.png', 'pics/before2012/鳥獣戯画風.png', '鳥獣戯画風01'),
+		A4(author$project$Page$Gallery$Image, 'b2011-04', 'pics/before2012/鳥獣戯画風revmini.png', 'pics/before2012/鳥獣戯画風rev.png', '鳥獣戯画風02'),
+		A4(author$project$Page$Gallery$Image, 'b2011-05', 'pics/before2012/maymini.png', 'pics/before2012/may.png', '五月晴れ'),
+		A4(author$project$Page$Gallery$Image, 'b2011-06', 'pics/before2012/二重盲検法mini.png', 'pics/before2012/二重盲検法.png', '二重猛犬法-double blind test-'),
+		A4(author$project$Page$Gallery$Image, 'b2011-07', 'pics/before2012/colourmini.png', 'pics/before2012/colour.png', 'colours'),
+		A4(author$project$Page$Gallery$Image, 'b2011-08', 'pics/before2012/あかねさすmini.png', 'pics/before2012/あかねさす.png', 'あかねさす')
 	]);
 var elm$html$Html$img = _VirtualDom_node('img');
 var elm$html$Html$span = _VirtualDom_node('span');
