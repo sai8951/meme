@@ -6633,7 +6633,7 @@ var author$project$Page$Gallery$makeModal = function (image) {
 						elm$html$Html$div,
 						_List_fromArray(
 							[
-								elm$html$Html$Attributes$class('modal-content center')
+								elm$html$Html$Attributes$class('modal-content')
 							]),
 						_List_fromArray(
 							[
@@ -6641,7 +6641,7 @@ var author$project$Page$Gallery$makeModal = function (image) {
 								elm$html$Html$div,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('row')
+										elm$html$Html$Attributes$class('modal-header')
 									]),
 								_List_fromArray(
 									[
@@ -6658,13 +6658,22 @@ var author$project$Page$Gallery$makeModal = function (image) {
 											]))
 									])),
 								A2(
-								elm$html$Html$img,
+								elm$html$Html$div,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('image-in-modal'),
-										elm$html$Html$Attributes$src(image.artwork)
+										elm$html$Html$Attributes$class('modal-body center')
 									]),
-								_List_Nil)
+								_List_fromArray(
+									[
+										A2(
+										elm$html$Html$img,
+										_List_fromArray(
+											[
+												elm$html$Html$Attributes$class('image-in-modal'),
+												elm$html$Html$Attributes$src(image.artwork)
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						elm$html$Html$div,
