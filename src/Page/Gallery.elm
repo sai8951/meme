@@ -154,7 +154,7 @@ view model =
       , div [ class "row" ] ( List.map makeModal images2014 )
       , h5 [ class "gallery-year" ] [ text "2013" ]
       , div [ class "row" ] ( List.map makeModal images2013 )
-      , h6 [] [ text "works for clients" ]
+      , h6 [] [ text "Works for Clients" ]
       , div [ class "row" ] ( List.map makeModal imagesSydney )
       , h5 [ class "gallery-year" ] [ text "2012" ]
       , div [ class "row" ] ( List.map makeModal images2012 )
