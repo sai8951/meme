@@ -128,21 +128,19 @@ view model =
     div [] [
         h5 [] [ text "2018" ]
       , div [ class "row" ] ( List.map makeModal images2018 )
-      , div [ class "row" ] []
-      , h5 [] [ text "2017" ]
+      , h5 [ class "gallery-year" ] [ text "2017" ]
       , div [ class "row" ] ( List.map makeModal images2017 )
-      , div [ class "row" ] []
-      , h5 [] [ text "2016" ]
+      , h5 [ class "gallery-year" ] [ text "2016" ]
       , div [ class "row" ] ( List.map makeModal images2016 )
-      , h5 [] [ text "2015" ]
+      , h5 [ class "gallery-year" ] [ text "2015" ]
       , div [ class "row" ] ( List.map makeModal images2015 )
-      , h5 [] [ text "2014" ]
+      , h5 [ class "gallery-year" ] [ text "2014" ]
       , div [ class "row" ] ( List.map makeModal images2014 )
-      , h5 [] [ text "2013" ]
+      , h5 [ class "gallery-year" ] [ text "2013" ]
       , div [ class "row" ] ( List.map makeModal images2013 )
-      , h5 [] [ text "2012" ]
+      , h5 [ class "gallery-year" ] [ text "2012" ]
       , div [ class "row" ] ( List.map makeModal images2012 )
-       , h5 [] [ text "~2011" ]
+      , h5 [ class "gallery-year" ] [ text "~2011" ]
       , div [ class "row" ] ( List.map makeModal imagesBefore2012 )
     ]
 
