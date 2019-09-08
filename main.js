@@ -6585,6 +6585,20 @@ var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 		A4(author$project$Page$Gallery$Image, 'b2011-07', 'pics/before2012/colourmini.png', 'pics/before2012/colour.png', 'colours'),
 		A4(author$project$Page$Gallery$Image, 'b2011-08', 'pics/before2012/あかねさすmini.png', 'pics/before2012/あかねさす.png', 'あかねさす')
 	]);
+var author$project$Page$Gallery$imagesSydney = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, 'w2013-01', 'pics/sydney/entermini.png', 'pics/sydney/enter.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-02', 'pics/sydney/02city_far_2mini.png', 'pics/sydney/02city_far_2.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-03', 'pics/sydney/Ash_WaterColourmini.png', 'pics/sydney/Ash_WaterColour.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-04', 'pics/sydney/biography01mini.png', 'pics/sydney/biography01.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-05', 'pics/sydney/discography03mini.png', 'pics/sydney/discography03.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-06', 'pics/sydney/Newsmini.png', 'pics/sydney/News.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-07', 'pics/sydney/Photo002mini.png', 'pics/sydney/Photo002.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-08', 'pics/sydney/Novel001mini.png', 'pics/sydney/Novel001.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-09', 'pics/sydney/Link001mini.png', 'pics/sydney/Link001.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-10', 'pics/sydney/show02mini.png', 'pics/sydney/show02.png', ''),
+		A4(author$project$Page$Gallery$Image, 'w2013-11', 'pics/sydney/video001mini.png', 'pics/sydney/video001.png', '')
+	]);
 var elm$html$Html$img = _VirtualDom_node('img');
 var elm$html$Html$span = _VirtualDom_node('span');
 var elm$html$Html$Attributes$src = function (url) {
@@ -6703,6 +6717,7 @@ var author$project$Page$Gallery$makeModal = function (image) {
 					]))
 			]));
 };
+var elm$html$Html$h6 = _VirtualDom_node('h6');
 var author$project$Page$Gallery$view = function (model) {
 	return A2(
 		elm$html$Html$div,
@@ -6808,6 +6823,20 @@ var author$project$Page$Gallery$view = function (model) {
 						elm$html$Html$Attributes$class('row')
 					]),
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2013)),
+				A2(
+				elm$html$Html$h6,
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text('works for clients')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$imagesSydney)),
 				A2(
 				elm$html$Html$h5,
 				_List_fromArray(

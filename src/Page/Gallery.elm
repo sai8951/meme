@@ -123,6 +123,22 @@ imagesBefore2012 =
     , Image "b2011-08" "pics/before2012/あかねさすmini.png" "pics/before2012/あかねさす.png" "あかねさす"
     ]
 
+
+imagesSydney =
+    [ Image "w2013-01" "pics/sydney/entermini.png" "pics/sydney/enter.png" ""
+    , Image "w2013-02" "pics/sydney/02city_far_2mini.png" "pics/sydney/02city_far_2.png" ""
+    , Image "w2013-03" "pics/sydney/Ash_WaterColourmini.png" "pics/sydney/Ash_WaterColour.png" ""
+    , Image "w2013-04" "pics/sydney/biography01mini.png" "pics/sydney/biography01.png" ""
+    , Image "w2013-05" "pics/sydney/discography03mini.png" "pics/sydney/discography03.png" ""
+    , Image "w2013-06" "pics/sydney/Newsmini.png" "pics/sydney/News.png" ""
+    , Image "w2013-07" "pics/sydney/Photo002mini.png" "pics/sydney/Photo002.png" ""
+    , Image "w2013-08" "pics/sydney/Novel001mini.png" "pics/sydney/Novel001.png" ""
+    , Image "w2013-09" "pics/sydney/Link001mini.png" "pics/sydney/Link001.png" ""
+    , Image "w2013-10" "pics/sydney/show02mini.png" "pics/sydney/show02.png" ""
+    , Image "w2013-11" "pics/sydney/video001mini.png" "pics/sydney/video001.png" ""
+    ]
+
+
 view : Model -> Html Msg
 view model =
     div [] [
@@ -138,6 +154,8 @@ view model =
       , div [ class "row" ] ( List.map makeModal images2014 )
       , h5 [ class "gallery-year" ] [ text "2013" ]
       , div [ class "row" ] ( List.map makeModal images2013 )
+      , h6 [] [ text "works for clients" ]
+      , div [ class "row" ] ( List.map makeModal imagesSydney )
       , h5 [ class "gallery-year" ] [ text "2012" ]
       , div [ class "row" ] ( List.map makeModal images2012 )
       , h5 [ class "gallery-year" ] [ text "~2011" ]
