@@ -67,15 +67,16 @@ h5 {
 }
 
 .modal.modal-fixed-footer .modal-content {
+    padding: 4px 6px;
     overflow-y: hidden;
 }
 
 .modal.modal-fixed-footer .modal-content .modal-header {
-    height: 15%;
+    height: 36px;
 }
 
 .modal.modal-fixed-footer .modal-content .modal-body {
-    height: 85%;
+    height: calc(100% - 36px);
 }
 
 .modal.modal-fixed-footer .modal-footer {
