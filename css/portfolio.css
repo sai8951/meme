@@ -62,12 +62,20 @@ h5 {
 @media only screen and (max-width: 992px) {
     .modal.modal-fixed-footer {
         top: 20% !important;
-        height: 50%;
+        height: 60%;
     }
 }
 
 .modal.modal-fixed-footer .modal-content {
     overflow-y: hidden;
+}
+
+.modal.modal-fixed-footer .modal-content .modal-header {
+    height: 15%;
+}
+
+.modal.modal-fixed-footer .modal-content .modal-body {
+    height: 85%;
 }
 
 .modal.modal-fixed-footer .modal-footer {
