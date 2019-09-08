@@ -6724,15 +6724,11 @@ var author$project$Page$Gallery$view = function (model) {
 					]),
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2018)),
 				A2(
-				elm$html$Html$div,
+				elm$html$Html$h5,
 				_List_fromArray(
 					[
-						elm$html$Html$Attributes$class('row')
+						elm$html$Html$Attributes$class('gallery-year')
 					]),
-				_List_Nil),
-				A2(
-				elm$html$Html$h5,
-				_List_Nil,
 				_List_fromArray(
 					[
 						elm$html$Html$text('2017')
@@ -6745,15 +6741,11 @@ var author$project$Page$Gallery$view = function (model) {
 					]),
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2017)),
 				A2(
-				elm$html$Html$div,
+				elm$html$Html$h5,
 				_List_fromArray(
 					[
-						elm$html$Html$Attributes$class('row')
+						elm$html$Html$Attributes$class('gallery-year')
 					]),
-				_List_Nil),
-				A2(
-				elm$html$Html$h5,
-				_List_Nil,
 				_List_fromArray(
 					[
 						elm$html$Html$text('2016')
@@ -6767,7 +6759,10 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2016)),
 				A2(
 				elm$html$Html$h5,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
 				_List_fromArray(
 					[
 						elm$html$Html$text('2015')
@@ -6781,7 +6776,10 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2015)),
 				A2(
 				elm$html$Html$h5,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
 				_List_fromArray(
 					[
 						elm$html$Html$text('2014')
@@ -6795,7 +6793,10 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2014)),
 				A2(
 				elm$html$Html$h5,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
 				_List_fromArray(
 					[
 						elm$html$Html$text('2013')
@@ -6809,7 +6810,10 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2013)),
 				A2(
 				elm$html$Html$h5,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
 				_List_fromArray(
 					[
 						elm$html$Html$text('2012')
@@ -6823,7 +6827,10 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2012)),
 				A2(
 				elm$html$Html$h5,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
 				_List_fromArray(
 					[
 						elm$html$Html$text('~2011')
