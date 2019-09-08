@@ -6415,10 +6415,10 @@ var author$project$Page$Biography$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						A2(author$project$Page$Biography$viewBioList, '28.Jun.-02.Jul.2019', 'ワインと楽しむアート展 at Gallery IYN, Osaka'),
-						A2(author$project$Page$Biography$viewBioList, '18-23.Dec.2015', '+P Tokyo2 at Design Festa Gallery, Tokyo'),
-						A2(author$project$Page$Biography$viewBioList, '31.Jul.-02.Aug.2015', 'PosCo 10 at Design Festa Gallery, Tokyo'),
-						A2(author$project$Page$Biography$viewBioList, '15.Jun.-11.Jul.2015', 'Pop Japan vol.5 at Me and Art Gallery, Sydney'),
+						A2(author$project$Page$Biography$viewBioList, '28.Jun.- 02.Jul.2019', 'ワインと楽しむアート展 at Gallery IYN, Osaka'),
+						A2(author$project$Page$Biography$viewBioList, '18- 23.Dec.2015', '+P Tokyo2 at Design Festa Gallery, Tokyo'),
+						A2(author$project$Page$Biography$viewBioList, '31.Jul.- 02.Aug.2015', 'PosCo 10 at Design Festa Gallery, Tokyo'),
+						A2(author$project$Page$Biography$viewBioList, '15.Jun.- 11.Jul.2015', 'Pop Japan vol.5 at Me and Art Gallery, Sydney'),
 						A2(author$project$Page$Biography$viewBioList, '23.Mar.2015', 'Ph.D. in lifescience, Kyoto University')
 					]))
 			]));
@@ -6633,29 +6633,47 @@ var author$project$Page$Gallery$makeModal = function (image) {
 						elm$html$Html$div,
 						_List_fromArray(
 							[
-								elm$html$Html$Attributes$class('modal-content center')
+								elm$html$Html$Attributes$class('modal-content')
 							]),
 						_List_fromArray(
 							[
 								A2(
-								elm$html$Html$a,
+								elm$html$Html$div,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('modal-close btn-flat right'),
-										elm$html$Html$Attributes$href('#')
+										elm$html$Html$Attributes$class('row')
 									]),
 								_List_fromArray(
 									[
-										elm$html$Html$text('Close')
+										A2(
+										elm$html$Html$a,
+										_List_fromArray(
+											[
+												elm$html$Html$Attributes$class('modal-close btn-flat right'),
+												elm$html$Html$Attributes$href('#')
+											]),
+										_List_fromArray(
+											[
+												elm$html$Html$text('Close')
+											]))
 									])),
 								A2(
-								elm$html$Html$img,
+								elm$html$Html$div,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('image-in-modal'),
-										elm$html$Html$Attributes$src(image.artwork)
+										elm$html$Html$Attributes$class('row center')
 									]),
-								_List_Nil)
+								_List_fromArray(
+									[
+										A2(
+										elm$html$Html$img,
+										_List_fromArray(
+											[
+												elm$html$Html$Attributes$class('image-in-modal'),
+												elm$html$Html$Attributes$src(image.artwork)
+											]),
+										_List_Nil)
+									]))
 							])),
 						A2(
 						elm$html$Html$div,
