@@ -6828,7 +6828,7 @@ var author$project$Page$Gallery$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						elm$html$Html$text('works for clients')
+						elm$html$Html$text('Works for Clients')
 					])),
 				A2(
 				elm$html$Html$div,
