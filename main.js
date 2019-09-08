@@ -6638,6 +6638,17 @@ var author$project$Page$Gallery$makeModal = function (image) {
 						_List_fromArray(
 							[
 								A2(
+								elm$html$Html$a,
+								_List_fromArray(
+									[
+										elm$html$Html$Attributes$class('modal-close btn-flat right'),
+										elm$html$Html$Attributes$href('#')
+									]),
+								_List_fromArray(
+									[
+										elm$html$Html$text('Close')
+									])),
+								A2(
 								elm$html$Html$img,
 								_List_fromArray(
 									[
@@ -6669,17 +6680,6 @@ var author$project$Page$Gallery$makeModal = function (image) {
 											[
 												elm$html$Html$text(image.modalId + (': ' + image.description))
 											]))
-									])),
-								A2(
-								elm$html$Html$a,
-								_List_fromArray(
-									[
-										elm$html$Html$Attributes$class('modal-close btn-flat'),
-										elm$html$Html$Attributes$href('#')
-									]),
-								_List_fromArray(
-									[
-										elm$html$Html$text('Close')
 									]))
 							]))
 					]))
