@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Url
 import Url.Parser as Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, string, top)
+import Page.Home as Home
 import Page.Gallery as Gallery
 import Page.Biography as Bio
 import Page.Links as Links
@@ -37,7 +38,7 @@ type alias Model =
 
 
 type Page
-  = Home
+  = Home Home.Model
   | Gallery Gallery.Model
   | Biography Bio.Model
   | Links Links.Model
@@ -57,6 +58,7 @@ init flags url key =
 type Msg
   = LinkClicked Browser.UrlRequest
   | UrlChanged Url.Url
+  | HomeMsg Home.Msg
   | GalleryMsg Gallery.Msg
   | BiographyMsg Bio.Msg
   | LinksMsg Links.Msg
@@ -77,6 +79,9 @@ update msg model =
     UrlChanged url ->
       stepUrl { model | url = url }
     
+    HomeMsg _ ->
+      ( model, Cmd.none)
+
     GalleryMsg _ ->
       ( model, Cmd.none)
 
@@ -135,30 +140,33 @@ viewNav model =
 
 showMenu : Page -> List (Html msg)
 showMenu page =
-  [  li (if page == Home then [ class "active" ] else []) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
-    , li (case page of
-            Gallery _ -> [ class "active" ]
-            _ -> []
-          ) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
-    , li (case page of
-            Biography _ -> [ class "active" ]
-            _ -> []
-          ) [ a [ class "sidenav-close", href "/meme/biography" ] [ text "Biography" ] ]
-    , li (case page of
-            Links _ -> [ class "active" ]
-            _ -> []
-          ) [ a [ class "sidenav-close", href "/meme/links" ] [ text "Links" ] ]
-    , li (case page of
-            Contact _ -> [ class "active" ]
-            _ -> []
-          ) [ a [ class "sidenav-close", href "/meme/contact" ] [ text "Contact" ] ]
-                ]
+  [ li (case page of
+          Home _ -> [ class "active" ]
+          _ -> []
+        ) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
+  , li (case page of
+          Gallery _ -> [ class "active" ]
+          _ -> []
+        ) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
+  , li (case page of
+          Biography _ -> [ class "active" ]
+          _ -> []
+        ) [ a [ class "sidenav-close", href "/meme/biography" ] [ text "Biography" ] ]
+  , li (case page of
+          Links _ -> [ class "active" ]
+          _ -> []
+        ) [ a [ class "sidenav-close", href "/meme/links" ] [ text "Links" ] ]
+  , li (case page of
+          Contact _ -> [ class "active" ]
+          _ -> []
+        ) [ a [ class "sidenav-close", href "/meme/contact" ] [ text "Contact" ] ]
+              ]
 
 viewPage : Model -> Html Msg
 viewPage { url, page } =
     case page of
-        Home ->
-            text "Home"
+        Home model ->
+            Html.map HomeMsg (Home.view model)
 
         Gallery model ->
             Html.map GalleryMsg (Gallery.view model)
@@ -181,8 +189,8 @@ stepUrl model =
     let
         parser =
             oneOf
-                [ map ( { model | page = Home }, Cmd.none ) top
-                , map ( { model | page = Home }, Cmd.none ) (s "meme")
+                [ map ( { model | page = Home {} }, Cmd.none ) top
+                , map ( { model | page = Home {} }, Cmd.none ) (s "meme")
                 , map ( { model | page = Gallery {} }, Cmd.none ) (s "meme" </> s "gallery")
                 , map ( { model | page = Biography {} }, Cmd.none ) (s "meme" </> s "biography")
                 , map ( { model | page = Links {} }, Cmd.none ) (s "meme" </> s "links")

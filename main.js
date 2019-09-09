@@ -4347,7 +4347,9 @@ var author$project$Main$Contact = function (a) {
 var author$project$Main$Gallery = function (a) {
 	return {$: 'Gallery', a: a};
 };
-var author$project$Main$Home = {$: 'Home'};
+var author$project$Main$Home = function (a) {
+	return {$: 'Home', a: a};
+};
 var author$project$Main$Links = function (a) {
 	return {$: 'Links', a: a};
 };
@@ -5658,7 +5660,10 @@ var author$project$Main$stepUrl = function (model) {
 				_Utils_Tuple2(
 					_Utils_update(
 						model,
-						{page: author$project$Main$Home}),
+						{
+							page: author$project$Main$Home(
+								{})
+						}),
 					elm$core$Platform$Cmd$none),
 				elm$url$Url$Parser$top),
 				A2(
@@ -5666,7 +5671,10 @@ var author$project$Main$stepUrl = function (model) {
 				_Utils_Tuple2(
 					_Utils_update(
 						model,
-						{page: author$project$Main$Home}),
+						{
+							page: author$project$Main$Home(
+								{})
+						}),
 					elm$core$Platform$Cmd$none),
 				elm$url$Url$Parser$s('meme')),
 				A2(
@@ -6057,6 +6065,8 @@ var author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{url: url}));
+			case 'HomeMsg':
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 			case 'GalleryMsg':
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 			case 'BiographyMsg':
@@ -6091,10 +6101,16 @@ var author$project$Main$showMenu = function (page) {
 		[
 			A2(
 			elm$html$Html$li,
-			_Utils_eq(page, author$project$Main$Home) ? _List_fromArray(
-				[
-					elm$html$Html$Attributes$class('active')
-				]) : _List_Nil,
+			function () {
+				if (page.$ === 'Home') {
+					return _List_fromArray(
+						[
+							elm$html$Html$Attributes$class('active')
+						]);
+				} else {
+					return _List_Nil;
+				}
+			}(),
 			_List_fromArray(
 				[
 					A2(
@@ -6354,6 +6370,9 @@ var author$project$Main$ContactMsg = function (a) {
 };
 var author$project$Main$GalleryMsg = function (a) {
 	return {$: 'GalleryMsg', a: a};
+};
+var author$project$Main$HomeMsg = function (a) {
+	return {$: 'HomeMsg', a: a};
 };
 var author$project$Main$LinksMsg = function (a) {
 	return {$: 'LinksMsg', a: a};
@@ -6874,6 +6893,60 @@ var author$project$Page$Gallery$view = function (model) {
 			]));
 };
 var elm$html$Html$Attributes$target = elm$html$Html$Attributes$stringProperty('target');
+var author$project$Page$Home$view = function (model) {
+	return A2(
+		elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$div,
+						_List_fromArray(
+							[
+								elm$html$Html$Attributes$class('col s12 m8 l7')
+							]),
+						_List_fromArray(
+							[
+								elm$html$Html$text('My first private exhibition will be held at Gallery IYN, Osaka during 14-20.Aug.2020.')
+							]))
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row center')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$a,
+						_List_fromArray(
+							[
+								elm$html$Html$Attributes$href('https://www.gallery-iyn.com/post/%E5%8C%97%E6%9E%95%E3%81%A7%E5%A4%A2%E3%82%92%E8%A6%8B%E3%82%8B-%E6%96%8E%E8%97%A4%E3%81%95%E3%81%84'),
+								elm$html$Html$Attributes$target('_blank')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								elm$html$Html$img,
+								_List_fromArray(
+									[
+										elm$html$Html$Attributes$class('home-image'),
+										elm$html$Html$Attributes$src('pics/2020_private_exhibition/saitou_sai_DM_CMYK_final.jpg')
+									]),
+								_List_Nil)
+							]))
+					]))
+			]));
+};
 var author$project$Page$Links$viewLinksList = F3(
 	function (sns, name, url) {
 		return A2(
@@ -6956,7 +7029,11 @@ var author$project$Main$viewPage = function (_n0) {
 	var page = _n0.page;
 	switch (page.$) {
 		case 'Home':
-			return elm$html$Html$text('Home');
+			var model = page.a;
+			return A2(
+				elm$html$Html$map,
+				author$project$Main$HomeMsg,
+				author$project$Page$Home$view(model));
 		case 'Gallery':
 			var model = page.a;
 			return A2(
