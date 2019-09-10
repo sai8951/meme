@@ -97,3 +97,22 @@ h5 {
 .home-image {
     height: 75vh
 }
+
+.page-footer .footer-copyright {
+    color: #000000;
+    background-color: transparent;
+}
+
+.page-footer {
+    padding-top: 1px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
