@@ -115,8 +115,10 @@ view : Model -> Browser.Document Msg
 view model =
   { title = "Sai's Portfolio"
     , body =
-        [ viewNav model
-        , div [ class "container" ] [ viewPage model ]
+        [ Html.main_ [] [ viewNav model
+                        , div [ class "container" ] [ viewPage model ]
+        ]
+        , viewFooter
         ]
     }
 
@@ -143,27 +145,27 @@ viewNav model =
 
 showMenu : Page -> List (Html msg)
 showMenu page =
-  [ li (case page of
-          Home _ -> [ class "active" ]
-          _ -> []
-        ) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
-  , li (case page of
-          Gallery _ -> [ class "active" ]
-          _ -> []
-        ) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
-  , li (case page of
-          Biography _ -> [ class "active" ]
-          _ -> []
-        ) [ a [ class "sidenav-close", href "/meme/biography" ] [ text "Biography" ] ]
-  , li (case page of
-          Links _ -> [ class "active" ]
-          _ -> []
-        ) [ a [ class "sidenav-close", href "/meme/links" ] [ text "Links" ] ]
-  , li (case page of
-          Contact _ -> [ class "active" ]
-          _ -> []
-        ) [ a [ class "sidenav-close", href "/meme/contact" ] [ text "Contact" ] ]
-              ]
+    [ li (case page of
+            Home _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
+    , li (case page of
+            Gallery _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme/gallery" ] [ text "Gallery" ] ]
+    , li (case page of
+            Biography _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme/biography" ] [ text "Biography" ] ]
+    , li (case page of
+            Links _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme/links" ] [ text "Links" ] ]
+    , li (case page of
+            Contact _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme/contact" ] [ text "Contact" ] ]
+                ]
 
 viewPage : Model -> Html Msg
 viewPage { url, page } =
@@ -186,6 +188,14 @@ viewPage { url, page } =
         NotFound ->
             text <| Url.toString url ++ " was not found. "
 
+
+viewFooter : Html Msg
+viewFooter =
+    footer [ class "page-footer" ] [
+          div [ class "footer-copyright" ] [
+              div [ class "container" ] [ span [ class "right" ] [ text "© Saitou Sai" ] ]
+          ]
+    ]
 
 stepUrl : Model -> ( Model, Cmd Msg )
 stepUrl model =

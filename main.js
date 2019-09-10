@@ -6081,8 +6081,9 @@ var author$project$Main$update = F2(
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 		}
 	});
-var elm$html$Html$a = _VirtualDom_node('a');
-var elm$html$Html$li = _VirtualDom_node('li');
+var elm$html$Html$div = _VirtualDom_node('div');
+var elm$html$Html$footer = _VirtualDom_node('footer');
+var elm$html$Html$span = _VirtualDom_node('span');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
 var elm$json$Json$Encode$string = _Json_wrap;
@@ -6094,6 +6095,45 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
+var author$project$Main$viewFooter = A2(
+	elm$html$Html$footer,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$class('page-footer')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$div,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('footer-copyright')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$div,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('container')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$span,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('right')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text('© Saitou Sai')
+								]))
+						]))
+				]))
+		]));
+var elm$html$Html$a = _VirtualDom_node('a');
+var elm$html$Html$li = _VirtualDom_node('li');
 var elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		elm$html$Html$Attributes$stringProperty,
@@ -6235,7 +6275,6 @@ var author$project$Main$showMenu = function (page) {
 				]))
 		]);
 };
-var elm$html$Html$div = _VirtualDom_node('div');
 var elm$html$Html$i = _VirtualDom_node('i');
 var elm$html$Html$nav = _VirtualDom_node('nav');
 var elm$html$Html$ul = _VirtualDom_node('ul');
@@ -6623,7 +6662,6 @@ var author$project$Page$Gallery$imagesSydney = _List_fromArray(
 		A4(author$project$Page$Gallery$Image, 'w2013-11', 'pics/sydney/video001mini.png', 'pics/sydney/video001.png', '')
 	]);
 var elm$html$Html$img = _VirtualDom_node('img');
-var elm$html$Html$span = _VirtualDom_node('span');
 var elm$html$Html$Attributes$src = function (url) {
 	return A2(
 		elm$html$Html$Attributes$stringProperty,
@@ -7067,21 +7105,29 @@ var author$project$Main$viewPage = function (_n0) {
 				elm$url$Url$toString(url) + ' was not found. ');
 	}
 };
+var elm$html$Html$main_ = _VirtualDom_node('main');
 var author$project$Main$view = function (model) {
 	return {
 		body: _List_fromArray(
 			[
-				author$project$Main$viewNav(model),
 				A2(
-				elm$html$Html$div,
+				elm$html$Html$main_,
+				_List_Nil,
 				_List_fromArray(
 					[
-						elm$html$Html$Attributes$class('container')
-					]),
-				_List_fromArray(
-					[
-						author$project$Main$viewPage(model)
-					]))
+						author$project$Main$viewNav(model),
+						A2(
+						elm$html$Html$div,
+						_List_fromArray(
+							[
+								elm$html$Html$Attributes$class('container')
+							]),
+						_List_fromArray(
+							[
+								author$project$Main$viewPage(model)
+							]))
+					])),
+				author$project$Main$viewFooter
 			]),
 		title: 'Sai\'s Portfolio'
 	};
