@@ -128,7 +128,7 @@ viewNav model =
         [ nav []
             [ div [ class "nav-wrapper" ]
                 [ div [ classList [ ( "col", True ), ( "s12", True ) ] ]
-                    [ a [ href "/meme", class "brand-logo" ] [ text "Sai's Portfolio" ]
+                    [ a [ href "/meme/", class "brand-logo" ] [ text "Sai's Portfolio" ]
                       , a [ href "#", attribute "data-target" "for-mobile",  class "sidenav-trigger" ] [ i [ class "material-icons" ] [ text "menu" ] ]
                       , ul
                           [ id "nav-mobile"
@@ -148,7 +148,7 @@ showMenu page =
     [ li (case page of
             Home _ -> [ class "active" ]
             _ -> []
-          ) [ a [ class "sidenav-close", href "/meme" ] [ text "Home" ] ]
+          ) [ a [ class "sidenav-close", href "/meme/" ] [ text "Home" ] ]
     , li (case page of
             Gallery _ -> [ class "active" ]
             _ -> []
