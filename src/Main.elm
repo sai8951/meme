@@ -214,7 +214,7 @@ stepUrl model =
         replacePath param  =
             case param of
                 Just path ->
-                    ( { model | page = Home {} }, Nav.replaceUrl model.key path )
+                    ( { model | page = NotFound }, Nav.replaceUrl model.key path )
                 Nothing ->
                     ( { model | page = Home {} }, Cmd.none )
     in

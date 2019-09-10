@@ -5956,10 +5956,7 @@ var author$project$Main$stepUrl = function (model) {
 			return _Utils_Tuple2(
 				_Utils_update(
 					model,
-					{
-						page: author$project$Main$Home(
-							{})
-					}),
+					{page: author$project$Main$NotFound}),
 				A2(elm$browser$Browser$Navigation$replaceUrl, model.key, path));
 		} else {
 			return _Utils_Tuple2(
