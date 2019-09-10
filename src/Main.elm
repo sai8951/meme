@@ -71,7 +71,10 @@ update msg model =
     LinkClicked urlRequest ->
       case urlRequest of
         Browser.Internal url ->
-          ( model, Nav.pushUrl model.key (Url.toString url) )
+          if String.endsWith "#" (Url.toString url) then
+            ( model, Cmd.none )
+          else
+            ( model, Nav.pushUrl model.key (Url.toString url) )
 
         Browser.External href ->
           ( model, Nav.load href )
