@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Url
 import Url.Parser as Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, string, top)
+import Url.Parser.Query as Query
 import Page.Home as Home
 import Page.Gallery as Gallery
 import Page.Biography as Bio
@@ -202,13 +203,20 @@ stepUrl model =
     let
         parser =
             oneOf
-                [ map ( { model | page = Home {} }, Cmd.none ) top
-                , map ( { model | page = Home {} }, Cmd.none ) (s "meme")
+                [ map replacePath (top <?> Query.string "path")
+                , map replacePath (s "meme" <?> Query.string "path")
                 , map ( { model | page = Gallery {} }, Cmd.none ) (s "meme" </> s "gallery")
                 , map ( { model | page = Biography {} }, Cmd.none ) (s "meme" </> s "biography")
                 , map ( { model | page = Links {} }, Cmd.none ) (s "meme" </> s "links")
                 , map ( { model | page = Contact {} }, Cmd.none ) (s "meme" </> s "contact")
                 ]
+
+        replacePath param  =
+            case param of
+                Just path ->
+                    ( { model | page = Home {} }, Nav.replaceUrl model.key path )
+                Nothing ->
+                    ( { model | page = Home {} }, Cmd.none )
     in
     Parser.parse parser model.url
         |> Maybe.withDefault ( { model | page = NotFound }, Cmd.none )
