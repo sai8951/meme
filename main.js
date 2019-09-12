@@ -6064,7 +6064,6 @@ var author$project$Main$subscriptions = function (_n0) {
 };
 var elm$browser$Browser$Navigation$load = _Browser_load;
 var elm$browser$Browser$Navigation$pushUrl = _Browser_pushUrl;
-var elm$core$String$endsWith = _String_endsWith;
 var elm$url$Url$addPort = F2(
 	function (maybePort, starter) {
 		if (maybePort.$ === 'Nothing') {
@@ -6116,10 +6115,12 @@ var author$project$Main$update = F2(
 				var urlRequest = msg.a;
 				if (urlRequest.$ === 'Internal') {
 					var url = urlRequest.a;
-					return A2(
-						elm$core$String$endsWith,
-						'#',
-						elm$url$Url$toString(url)) ? _Utils_Tuple2(model, elm$core$Platform$Cmd$none) : _Utils_Tuple2(
+					return _Utils_eq(
+						elm$url$Url$toString(
+							_Utils_update(
+								url,
+								{fragment: elm$core$Maybe$Nothing})),
+						elm$url$Url$toString(model.url)) ? _Utils_Tuple2(model, elm$core$Platform$Cmd$none) : _Utils_Tuple2(
 						model,
 						A2(
 							elm$browser$Browser$Navigation$pushUrl,
