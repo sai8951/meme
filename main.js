@@ -6230,7 +6230,7 @@ var author$project$Main$showMenu = function (page) {
 					_List_fromArray(
 						[
 							elm$html$Html$Attributes$class('sidenav-close'),
-							elm$html$Html$Attributes$href('/meme')
+							elm$html$Html$Attributes$href('/meme/')
 						]),
 					_List_fromArray(
 						[
@@ -6419,7 +6419,7 @@ var author$project$Main$viewNav = function (model) {
 										elm$html$Html$a,
 										_List_fromArray(
 											[
-												elm$html$Html$Attributes$href('/meme'),
+												elm$html$Html$Attributes$href('/meme/'),
 												elm$html$Html$Attributes$class('brand-logo')
 											]),
 										_List_fromArray(
