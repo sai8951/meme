@@ -95,7 +95,8 @@ h5 {
 }
 
 .home-image {
-    height: 75vh
+    max-height: 75vh;
+    max-width: 100%;
 }
 
 .page-footer .footer-copyright {
