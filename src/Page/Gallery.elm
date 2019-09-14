@@ -139,10 +139,17 @@ imagesSydney =
     ]
 
 
+imagesDid =
+    [ Image "w2019-01" "pics/DID_anthology/DIDmini.jpg" "pics/DID_anthology/DID.jpg" "第七回文学フリマ大阪(08.Sep.2019)"]
+
+
 view : Model -> Html Msg
 view model =
     div [] [
-        h5 [] [ text "2018" ]
+        h5 [ class "gallery-year" ] [ text "2019" ]
+      , h6 [] [ text "Works for Clients" ]
+      , div [ class "row" ] ( List.map makeModal imagesDid )
+      , h5 [] [ text "2018" ]
       , div [ class "row" ] ( List.map makeModal images2018 )
       , h5 [ class "gallery-year" ] [ text "2017" ]
       , div [ class "row" ] ( List.map makeModal images2017 )
