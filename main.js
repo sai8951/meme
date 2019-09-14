@@ -6716,6 +6716,10 @@ var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 		A4(author$project$Page$Gallery$Image, 'b2011-07', 'pics/before2012/colourmini.png', 'pics/before2012/colour.png', 'colours'),
 		A4(author$project$Page$Gallery$Image, 'b2011-08', 'pics/before2012/あかねさすmini.png', 'pics/before2012/あかねさす.png', 'あかねさす')
 	]);
+var author$project$Page$Gallery$imagesDid = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, 'w2019-01', 'pics/DID_anthology/DIDmini.jpg', 'pics/DID_anthology/DID.jpg', '第七回文学フリマ大阪(08.Sep.2019)')
+	]);
 var author$project$Page$Gallery$imagesSydney = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, 'w2013-01', 'pics/sydney/entermini.png', 'pics/sydney/enter.png', ''),
@@ -6854,6 +6858,30 @@ var author$project$Page$Gallery$view = function (model) {
 		_List_Nil,
 		_List_fromArray(
 			[
+				A2(
+				elm$html$Html$h5,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text('2019')
+					])),
+				A2(
+				elm$html$Html$h6,
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text('Works for Clients')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$imagesDid)),
 				A2(
 				elm$html$Html$h5,
 				_List_Nil,
