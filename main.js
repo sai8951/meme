@@ -6753,6 +6753,10 @@ var author$project$Page$Gallery$images2018 = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, '2018-01', 'pics/2018/食事_モノトーンmini.png', 'pics/2018/食事_モノトーン.png', '読書')
 	]);
+var author$project$Page$Gallery$images2019 = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, '2019-01', 'pics/2019/love_RGBmini.jpg', 'pics/2019/love_RGB.jpg', '読書')
+	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, 'b2011-01', 'pics/before2012/愛犬pngvermini.PNG', 'pics/before2012/愛犬pngver.PNG', 'My doggy'),
@@ -6916,6 +6920,13 @@ var author$project$Page$Gallery$view = function (model) {
 					[
 						elm$html$Html$text('2019')
 					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2019)),
 				A2(
 				elm$html$Html$h6,
 				_List_Nil,

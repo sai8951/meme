@@ -19,6 +19,11 @@ type alias Image =
     }
 
 
+images2019 =
+    [ Image "2019-01" "pics/2019/love_RGBmini.jpg" "pics/2019/love_RGB.jpg" "読書"
+    ]
+
+
 images2018 =
     [ Image "2018-01" "pics/2018/食事_モノトーンmini.png" "pics/2018/食事_モノトーン.png" "読書"
     ]
@@ -147,6 +152,7 @@ view : Model -> Html Msg
 view model =
     div [] [
         h5 [ class "gallery-year" ] [ text "2019" ]
+      , div [ class "row" ] ( List.map makeModal images2019 )
       , h6 [] [ text "Works for Clients" ]
       , div [ class "row" ] ( List.map makeModal imagesDid )
       , h5 [] [ text "2018" ]
