@@ -9,6 +9,7 @@ import Page.Home as Home
 import Page.Gallery as Gallery
 import Page.Biography as Bio
 import Page.Links as Links
+import Page.Shop as Shop
 import Page.Contact as Contact
 
 
@@ -43,6 +44,7 @@ type Page
   | Gallery Gallery.Model
   | Biography Bio.Model
   | Links Links.Model
+  | Shop Shop.Model
   | Contact Contact.Model
   | NotFound
 
@@ -63,6 +65,7 @@ type Msg
   | GalleryMsg Gallery.Msg
   | BiographyMsg Bio.Msg
   | LinksMsg Links.Msg
+  | ShopMsg Shop.Msg
   | ContactMsg Contact.Msg
 
 
@@ -93,6 +96,9 @@ update msg model =
       ( model, Cmd.none )
     
     LinksMsg _ ->
+      ( model, Cmd.none)
+    
+    ShopMsg _ ->
       ( model, Cmd.none)
     
     ContactMsg _ ->
@@ -163,6 +169,10 @@ showMenu page =
             _ -> []
           ) [ a [ class "sidenav-close", href "/meme/links" ] [ text "Links" ] ]
     , li (case page of
+            Shop _ -> [ class "active" ]
+            _ -> []
+          ) [ a [ class "sidenav-close", href "/meme/shop" ] [ text "Shop" ] ]
+    , li (case page of
             Contact _ -> [ class "active" ]
             _ -> []
           ) [ a [ class "sidenav-close", href "/meme/contact" ] [ text "Contact" ] ]
@@ -182,6 +192,9 @@ viewPage { url, page } =
         
         Links model ->
             Html.map LinksMsg (Links.view model)
+        
+        Shop model ->
+            Html.map ShopMsg (Shop.view model)
         
         Contact model ->
             Html.map ContactMsg (Contact.view model)
@@ -208,6 +221,7 @@ stepUrl model =
                 , map ( { model | page = Gallery {} }, Cmd.none ) (s "meme" </> s "gallery")
                 , map ( { model | page = Biography {} }, Cmd.none ) (s "meme" </> s "biography")
                 , map ( { model | page = Links {} }, Cmd.none ) (s "meme" </> s "links")
+                , map ( { model | page = Shop {} }, Cmd.none ) (s "meme" </> s "shop")
                 , map ( { model | page = Contact {} }, Cmd.none ) (s "meme" </> s "contact")
                 ]
 
