@@ -20,7 +20,7 @@ type alias Image =
 
 
 images2019 =
-    [ Image "2019-01" "pics/2019/love_RGBmini.jpg" "pics/2019/love_RGB.jpg" "読書"
+    [ Image "2019-01" "pics/2019/love_RGBmini.jpg" "pics/2019/love_RGB.jpg" "Love kills you."
     ]
 
 

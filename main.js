@@ -6755,7 +6755,7 @@ var author$project$Page$Gallery$images2018 = _List_fromArray(
 	]);
 var author$project$Page$Gallery$images2019 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2019-01', 'pics/2019/love_RGBmini.jpg', 'pics/2019/love_RGB.jpg', '読書')
+		A4(author$project$Page$Gallery$Image, '2019-01', 'pics/2019/love_RGBmini.jpg', 'pics/2019/love_RGB.jpg', 'Love kills you.')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
