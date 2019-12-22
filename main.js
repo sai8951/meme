@@ -4353,6 +4353,9 @@ var author$project$Main$Home = function (a) {
 var author$project$Main$Links = function (a) {
 	return {$: 'Links', a: a};
 };
+var author$project$Main$Shop = function (a) {
+	return {$: 'Shop', a: a};
+};
 var elm$browser$Browser$External = function (a) {
 	return {$: 'External', a: a};
 };
@@ -6034,6 +6037,20 @@ var author$project$Main$stepUrl = function (model) {
 					_Utils_update(
 						model,
 						{
+							page: author$project$Main$Shop(
+								{})
+						}),
+					elm$core$Platform$Cmd$none),
+				A2(
+					elm$url$Url$Parser$slash,
+					elm$url$Url$Parser$s('meme'),
+					elm$url$Url$Parser$s('shop'))),
+				A2(
+				elm$url$Url$Parser$map,
+				_Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
 							page: author$project$Main$Contact(
 								{})
 						}),
@@ -6145,6 +6162,8 @@ var author$project$Main$update = F2(
 			case 'BiographyMsg':
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 			case 'LinksMsg':
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
+			case 'ShopMsg':
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 			default:
 				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
@@ -6319,6 +6338,32 @@ var author$project$Main$showMenu = function (page) {
 			A2(
 			elm$html$Html$li,
 			function () {
+				if (page.$ === 'Shop') {
+					return _List_fromArray(
+						[
+							elm$html$Html$Attributes$class('active')
+						]);
+				} else {
+					return _List_Nil;
+				}
+			}(),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$a,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('sidenav-close'),
+							elm$html$Html$Attributes$href('/meme/shop')
+						]),
+					_List_fromArray(
+						[
+							elm$html$Html$text('Shop')
+						]))
+				])),
+			A2(
+			elm$html$Html$li,
+			function () {
 				if (page.$ === 'Contact') {
 					return _List_fromArray(
 						[
@@ -6488,6 +6533,9 @@ var author$project$Main$HomeMsg = function (a) {
 };
 var author$project$Main$LinksMsg = function (a) {
 	return {$: 'LinksMsg', a: a};
+};
+var author$project$Main$ShopMsg = function (a) {
+	return {$: 'ShopMsg', a: a};
 };
 var author$project$Page$Biography$viewBioList = F2(
 	function (date, exhibition) {
@@ -7161,6 +7209,76 @@ var author$project$Page$Links$view = function (model) {
 					]))
 			]));
 };
+var author$project$Page$Shop$viewLinksList = F3(
+	function (shop, name, url) {
+		return A2(
+			elm$html$Html$li,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$div,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('row underline')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col s6 m2 l2')
+								]),
+							_List_fromArray(
+								[
+									elm$html$Html$text(shop)
+								])),
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col s6 m6 l6 font-bold')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									elm$html$Html$a,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$href(url),
+											elm$html$Html$Attributes$target('_blank')
+										]),
+									_List_fromArray(
+										[
+											elm$html$Html$text(name)
+										]))
+								]))
+						]))
+				]));
+	});
+var author$project$Page$Shop$view = function (model) {
+	return A2(
+		elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A2(
+				elm$html$Html$h5,
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text('Shop')
+					])),
+				A2(
+				elm$html$Html$ul,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A3(author$project$Page$Shop$viewLinksList, 'suzuri :', 'sai8951', 'https://suzuri.jp/sai8951')
+					]))
+			]));
+};
 var elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
 var elm$html$Html$map = elm$virtual_dom$VirtualDom$map;
 var author$project$Main$viewPage = function (_n0) {
@@ -7191,6 +7309,12 @@ var author$project$Main$viewPage = function (_n0) {
 				elm$html$Html$map,
 				author$project$Main$LinksMsg,
 				author$project$Page$Links$view(model));
+		case 'Shop':
+			var model = page.a;
+			return A2(
+				elm$html$Html$map,
+				author$project$Main$ShopMsg,
+				author$project$Page$Shop$view(model));
 		case 'Contact':
 			var model = page.a;
 			return A2(
