@@ -14,8 +14,8 @@ type Msg
 view : Model -> Html Msg
 view model =
     div [] [ h5 [] [ text "Contact" ]
-           , ul [] [ viewContactList "Gmail :" "sai.e8951@gmail.com"
-                   ]
+           , ul [] [ viewContactList "My name :" "斎藤さい (SAITOU Sai)"]
+           , ul [] [ viewContactList "Gmail :" "sai.e8951@gmail.com"]
            ]
 
 
