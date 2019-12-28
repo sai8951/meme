@@ -6658,6 +6658,13 @@ var author$project$Page$Contact$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
+						A2(author$project$Page$Contact$viewContactList, 'My name :', '斎藤さい (SAITOU Sai)')
+					])),
+				A2(
+				elm$html$Html$ul,
+				_List_Nil,
+				_List_fromArray(
+					[
 						A2(author$project$Page$Contact$viewContactList, 'Gmail :', 'sai.e8951@gmail.com')
 					]))
 			]));
