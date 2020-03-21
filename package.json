@@ -18,7 +18,7 @@
   "homepage": "https://github.com/sai8951/meme#readme",
   "devDependencies": {
     "elm": "^0.19.0-no-deps",
-    "elm-live": "^3.4.1",
+    "elm-live": "^4.0.2",
     "sass": "^1.22.9"
   }
 }
