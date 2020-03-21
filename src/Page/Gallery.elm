@@ -19,6 +19,12 @@ type alias Image =
     }
 
 
+images2020 =
+    [ Image "2020-01" "pics/2020/メイド長_mini.png" "pics/2020/メイド長.png" "メイド長"
+    , Image "2020-02" "pics/2020/gothic_lolita_mini.png" "pics/2020/gothic_lolita.png" "Gothic Lolita"
+    , Image "2020-03" "pics/2020/fashion_illust_mini.png" "pics/2020/fashion_illust.png" "Fashion Show"
+    ]
+
 images2019 =
     [ Image "2019-01" "pics/2019/love_RGBmini.jpg" "pics/2019/love_RGB.jpg" "Love kills you."
     ]
@@ -151,7 +157,9 @@ imagesDid =
 view : Model -> Html Msg
 view model =
     div [] [
-        h5 [ class "gallery-year" ] [ text "2019" ]
+        h5 [ class "gallery-year" ] [ text "2020" ]
+      , div [ class "row" ] ( List.map makeModal images2020 )
+      , h5 [ class "gallery-year" ] [ text "2020" ]
       , div [ class "row" ] ( List.map makeModal images2019 )
       , h6 [] [ text "Works for Clients" ]
       , div [ class "row" ] ( List.map makeModal imagesDid )

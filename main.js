@@ -6764,6 +6764,12 @@ var author$project$Page$Gallery$images2019 = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, '2019-01', 'pics/2019/love_RGBmini.jpg', 'pics/2019/love_RGB.jpg', 'Love kills you.')
 	]);
+var author$project$Page$Gallery$images2020 = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, '2020-01', 'pics/2020/メイド長_mini.png', 'pics/2020/メイド長.png', 'メイド長'),
+		A4(author$project$Page$Gallery$Image, '2020-02', 'pics/2020/gothic_lolita_mini.png', 'pics/2020/gothic_lolita.png', 'Gothic Lolita'),
+		A4(author$project$Page$Gallery$Image, '2020-03', 'pics/2020/fashion_illust_mini.png', 'pics/2020/fashion_illust.png', 'Fashion Show')
+	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, 'b2011-01', 'pics/before2012/愛犬pngvermini.PNG', 'pics/before2012/愛犬pngver.PNG', 'My doggy'),
@@ -6925,7 +6931,24 @@ var author$project$Page$Gallery$view = function (model) {
 					]),
 				_List_fromArray(
 					[
-						elm$html$Html$text('2019')
+						elm$html$Html$text('2020')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2020)),
+				A2(
+				elm$html$Html$h5,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text('2020')
 					])),
 				A2(
 				elm$html$Html$div,
