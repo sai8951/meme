@@ -6948,7 +6948,7 @@ var author$project$Page$Gallery$view = function (model) {
 					]),
 				_List_fromArray(
 					[
-						elm$html$Html$text('2020')
+						elm$html$Html$text('2019')
 					])),
 				A2(
 				elm$html$Html$div,
