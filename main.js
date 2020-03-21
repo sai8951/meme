@@ -6973,7 +6973,10 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$imagesDid)),
 				A2(
 				elm$html$Html$h5,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
 				_List_fromArray(
 					[
 						elm$html$Html$text('2018')
