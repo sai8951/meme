@@ -20,6 +20,6 @@ view model =
             ]
         , div [ class "row center" ]
             [ a [ href "https://www.gallery-iyn.com/post/%E5%8C%97%E6%9E%95%E3%81%A7%E5%A4%A2%E3%82%92%E8%A6%8B%E3%82%8B-%E6%96%8E%E8%97%A4%E3%81%95%E3%81%84", target "_blank"]
-                [ img [ class "home-image", src "pics/2020_private_exhibition/saitou_sai_DM_CMYK_final.jpg" ] [] ]
+                [ img [ class "home-image", src "pics/2020_private_exhibition/saitou_sai_DM_CMYK_Sep.png" ] [] ]
             ]
         ]

@@ -7171,7 +7171,7 @@ var author$project$Page$Home$view = function (model) {
 								_List_fromArray(
 									[
 										elm$html$Html$Attributes$class('home-image'),
-										elm$html$Html$Attributes$src('pics/2020_private_exhibition/saitou_sai_DM_CMYK_final.jpg')
+										elm$html$Html$Attributes$src('pics/2020_private_exhibition/saitou_sai_DM_CMYK_Sep.png')
 									]),
 								_List_Nil)
 							]))
