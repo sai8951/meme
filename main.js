@@ -7146,7 +7146,7 @@ var author$project$Page$Home$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								elm$html$Html$text('My first private exhibition will be held at Gallery IYN, Osaka during 14-20.Aug.2020.')
+								elm$html$Html$text('My first private exhibition will be held at Gallery IYN, Osaka during 24-30.Sep.2020.')
 							]))
 					])),
 				A2(
