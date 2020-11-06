@@ -7123,7 +7123,6 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$imagesBefore2012))
 			]));
 };
-var elm$html$Html$Attributes$target = elm$html$Html$Attributes$stringProperty('target');
 var author$project$Page$Home$view = function (model) {
 	return A2(
 		elm$html$Html$div,
@@ -7146,7 +7145,7 @@ var author$project$Page$Home$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								elm$html$Html$text('My first private exhibition will be held at Gallery IYN, Osaka during 24-30.Sep.2020.')
+								elm$html$Html$text('I will participate in a group exhibition at Recto Verso Gallery in Tokyo during 16-20.Feb.2021.')
 							]))
 					])),
 				A2(
@@ -7158,26 +7157,17 @@ var author$project$Page$Home$view = function (model) {
 				_List_fromArray(
 					[
 						A2(
-						elm$html$Html$a,
+						elm$html$Html$img,
 						_List_fromArray(
 							[
-								elm$html$Html$Attributes$href('https://www.gallery-iyn.com/post/%E5%8C%97%E6%9E%95%E3%81%A7%E5%A4%A2%E3%82%92%E8%A6%8B%E3%82%8B-%E6%96%8E%E8%97%A4%E3%81%95%E3%81%84'),
-								elm$html$Html$Attributes$target('_blank')
+								elm$html$Html$Attributes$class('home-image'),
+								elm$html$Html$Attributes$src('pics/etc/coming_soon.png')
 							]),
-						_List_fromArray(
-							[
-								A2(
-								elm$html$Html$img,
-								_List_fromArray(
-									[
-										elm$html$Html$Attributes$class('home-image'),
-										elm$html$Html$Attributes$src('pics/2020_private_exhibition/saitou_sai_DM_CMYK_Sep.png')
-									]),
-								_List_Nil)
-							]))
+						_List_Nil)
 					]))
 			]));
 };
+var elm$html$Html$Attributes$target = elm$html$Html$Attributes$stringProperty('target');
 var author$project$Page$Links$viewLinksList = F3(
 	function (sns, name, url) {
 		return A2(
