@@ -19,10 +19,19 @@ type alias Image =
     }
 
 
+images2021 =
+    [ Image "2021-01" "pics/2021/2021年賀状_mini.png" "pics/2021/2021年賀状.png" "New year card"
+    , Image "2021-02" "pics/2021/20210214_mini.png" "pics/2021/20210214.png" "untitled"
+    , Image "2021-03" "pics/2021/unhealthy_mini.png" "pics/2021/unhealthy.png" "Unhealthy beauty"
+    , Image "2021-04" "pics/2021/ポニテ_mini.png" "pics/2021/ポニテ.png" "Ponytail"
+    , Image "2021-05" "pics/2021/神の一滴_mini.png" "pics/2021/神の一滴.png" "One drop from God"
+    ]
+
 images2020 =
     [ Image "2020-01" "pics/2020/メイド長_mini.png" "pics/2020/メイド長.png" "メイド長"
     , Image "2020-02" "pics/2020/gothic_lolita_mini.png" "pics/2020/gothic_lolita.png" "Gothic Lolita"
     , Image "2020-03" "pics/2020/fashion_illust_mini.png" "pics/2020/fashion_illust.png" "Fashion Show"
+    , Image "2020-04" "pics/2020/actin_mini.png" "pics/2020/actin.png" "Actin fiber expands your consciousness."
     ]
 
 images2019 =
@@ -157,7 +166,9 @@ imagesDid =
 view : Model -> Html Msg
 view model =
     div [] [
-        h5 [ class "gallery-year" ] [ text "2020" ]
+        h5 [ class "gallery-year" ] [ text "2021" ]
+      , div [ class "row" ] ( List.map makeModal images2021 )
+      , h5 [ class "gallery-year" ] [ text "2020" ]
       , div [ class "row" ] ( List.map makeModal images2020 )
       , h5 [ class "gallery-year" ] [ text "2019" ]
       , div [ class "row" ] ( List.map makeModal images2019 )

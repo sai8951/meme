@@ -6768,7 +6768,16 @@ var author$project$Page$Gallery$images2020 = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, '2020-01', 'pics/2020/メイド長_mini.png', 'pics/2020/メイド長.png', 'メイド長'),
 		A4(author$project$Page$Gallery$Image, '2020-02', 'pics/2020/gothic_lolita_mini.png', 'pics/2020/gothic_lolita.png', 'Gothic Lolita'),
-		A4(author$project$Page$Gallery$Image, '2020-03', 'pics/2020/fashion_illust_mini.png', 'pics/2020/fashion_illust.png', 'Fashion Show')
+		A4(author$project$Page$Gallery$Image, '2020-03', 'pics/2020/fashion_illust_mini.png', 'pics/2020/fashion_illust.png', 'Fashion Show'),
+		A4(author$project$Page$Gallery$Image, '2020-04', 'pics/2020/actin_mini.png', 'pics/2020/actin.png', 'Actin fiber expands your consciousness.')
+	]);
+var author$project$Page$Gallery$images2021 = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, '2021-01', 'pics/2021/2021年賀状_mini.png', 'pics/2021/2021年賀状.png', 'New year card'),
+		A4(author$project$Page$Gallery$Image, '2021-02', 'pics/2021/20210214_mini.png', 'pics/2021/20210214.png', 'untitled'),
+		A4(author$project$Page$Gallery$Image, '2021-03', 'pics/2021/unhealthy_mini.png', 'pics/2021/unhealthy.png', 'Unhealthy beauty'),
+		A4(author$project$Page$Gallery$Image, '2021-04', 'pics/2021/ポニテ_mini.png', 'pics/2021/ポニテ.png', 'Ponytail'),
+		A4(author$project$Page$Gallery$Image, '2021-05', 'pics/2021/神の一滴_mini.png', 'pics/2021/神の一滴.png', 'One drop from God')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
@@ -6923,6 +6932,23 @@ var author$project$Page$Gallery$view = function (model) {
 		_List_Nil,
 		_List_fromArray(
 			[
+				A2(
+				elm$html$Html$h5,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text('2021')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2021)),
 				A2(
 				elm$html$Html$h5,
 				_List_fromArray(
@@ -7123,6 +7149,7 @@ var author$project$Page$Gallery$view = function (model) {
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$imagesBefore2012))
 			]));
 };
+var elm$html$Html$br = _VirtualDom_node('br');
 var author$project$Page$Home$view = function (model) {
 	return A2(
 		elm$html$Html$div,
@@ -7145,7 +7172,9 @@ var author$project$Page$Home$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								elm$html$Html$text('I will participate in a group exhibition at Recto Verso Gallery in Tokyo during 16-20.Feb.2021.')
+								elm$html$Html$text('You are what I was and what I will.'),
+								A2(elm$html$Html$br, _List_Nil, _List_Nil),
+								elm$html$Html$text('All the consciousness in the past, present and future is \"I\".')
 							]))
 					])),
 				A2(
@@ -7161,7 +7190,7 @@ var author$project$Page$Home$view = function (model) {
 						_List_fromArray(
 							[
 								elm$html$Html$Attributes$class('home-image'),
-								elm$html$Html$Attributes$src('pics/etc/coming_soon.png')
+								elm$html$Html$Attributes$src('pics/2016/独我論.jpg')
 							]),
 						_List_Nil)
 					]))
