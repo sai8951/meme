@@ -18,6 +18,9 @@ type alias Image =
     , description : String
     }
 
+images2022 =
+    [ Image "2022-01" "pics/2022/melt_mini.png" "pics/2022/melt.png" "melt"
+    ]
 
 images2021 =
     [ Image "2021-01" "pics/2021/2021年賀状_mini.png" "pics/2021/2021年賀状.png" "New year card"
@@ -166,7 +169,9 @@ imagesDid =
 view : Model -> Html Msg
 view model =
     div [] [
-        h5 [ class "gallery-year" ] [ text "2021" ]
+        h5 [ class "gallery-year" ] [ text "2022" ]
+      , div [ class "row" ] ( List.map makeModal images2022 )
+      , h5 [ class "gallery-year" ] [ text "2021" ]
       , div [ class "row" ] ( List.map makeModal images2021 )
       , h5 [ class "gallery-year" ] [ text "2020" ]
       , div [ class "row" ] ( List.map makeModal images2020 )

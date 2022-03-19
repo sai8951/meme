@@ -6779,6 +6779,10 @@ var author$project$Page$Gallery$images2021 = _List_fromArray(
 		A4(author$project$Page$Gallery$Image, '2021-04', 'pics/2021/ポニテ_mini.png', 'pics/2021/ポニテ.png', 'Ponytail'),
 		A4(author$project$Page$Gallery$Image, '2021-05', 'pics/2021/神の一滴_mini.png', 'pics/2021/神の一滴.png', 'One drop from God')
 	]);
+var author$project$Page$Gallery$images2022 = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, '2022-01', 'pics/2022/melt_mini.png', 'pics/2022/melt.png', 'melt')
+	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, 'b2011-01', 'pics/before2012/愛犬pngvermini.PNG', 'pics/before2012/愛犬pngver.PNG', 'My doggy'),
@@ -6932,6 +6936,23 @@ var author$project$Page$Gallery$view = function (model) {
 		_List_Nil,
 		_List_fromArray(
 			[
+				A2(
+				elm$html$Html$h5,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text('2022')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2022)),
 				A2(
 				elm$html$Html$h5,
 				_List_fromArray(
