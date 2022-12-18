@@ -6781,7 +6781,12 @@ var author$project$Page$Gallery$images2021 = _List_fromArray(
 	]);
 var author$project$Page$Gallery$images2022 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2022-01', 'pics/2022/melt_mini.png', 'pics/2022/melt.png', 'melt')
+		A4(author$project$Page$Gallery$Image, '2022-01', 'pics/2022/melt_mini.png', 'pics/2022/melt.png', 'melt'),
+		A4(author$project$Page$Gallery$Image, '2022-02', 'pics/2022/ippondake_color_mini.jpg', 'pics/2022/ippondake_color.jpg', '妖怪イッポンダケ'),
+		A4(author$project$Page$Gallery$Image, '2022-03', 'pics/2022/rimne001_mini.jpg', 'pics/2022/rimne001.png', '輪廻'),
+		A4(author$project$Page$Gallery$Image, '2022-04', 'pics/2022/unhealthy_beauty_2_mini.jpg', 'pics/2022/unhealthy_beauty_2.png', 'Unhealthy Beauty No.2'),
+		A4(author$project$Page$Gallery$Image, '2022-05', 'pics/2022/tak2022_brighter_mini.jpg', 'pics/2022/tak2022_brighter.png', 'Portrait'),
+		A4(author$project$Page$Gallery$Image, '2022-06', 'pics/2022/RIP_mini.jpg', 'pics/2022/RIP.png', 'Requiescat In Pace')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
