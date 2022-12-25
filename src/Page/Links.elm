@@ -20,6 +20,7 @@ view model =
                     , viewLinksList "deviantArt :" "sai-wind" "https://www.deviantart.com/sai-wind"
                     , viewLinksList "ShareArt :" "斎藤さい" "https://say-iw.share-art.jp/user/views"
                     , viewLinksList "Behance :" "Sai Saitou" "https://www.behance.net/sai8951"
+                    , viewLinksList "YouTobe :" "Dr. Rhino's Laboratory" "https://www.youtube.com/@sai8951"
                    ]
            ]
 

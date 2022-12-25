@@ -7294,7 +7294,8 @@ var author$project$Page$Links$view = function (model) {
 						A3(author$project$Page$Links$viewLinksList, 'pixiv :', '斎藤さい', 'https://www.pixiv.net/member.php?id=2718132'),
 						A3(author$project$Page$Links$viewLinksList, 'deviantArt :', 'sai-wind', 'https://www.deviantart.com/sai-wind'),
 						A3(author$project$Page$Links$viewLinksList, 'ShareArt :', '斎藤さい', 'https://say-iw.share-art.jp/user/views'),
-						A3(author$project$Page$Links$viewLinksList, 'Behance :', 'Sai Saitou', 'https://www.behance.net/sai8951')
+						A3(author$project$Page$Links$viewLinksList, 'Behance :', 'Sai Saitou', 'https://www.behance.net/sai8951'),
+						A3(author$project$Page$Links$viewLinksList, 'YouTobe :', 'Dr. Rhino\'s Laboratory', 'https://www.youtube.com/@sai8951')
 					]))
 			]));
 };
