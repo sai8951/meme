@@ -18,9 +18,11 @@ type alias Image =
     , description : String
     }
 
+
 images2023 =
     [ Image "2023-01" "pics/2023/2023_new_year_card_mini.png" "pics/2023/2023_new_year_card.png" "New Year Card 2023"
     ]
+
 
 images2022 =
     [ Image "2022-01" "pics/2022/year_of_tiger_ver2_mini.png" "pics/2022/year_of_tiger_ver2.png" "New Year Card 2022"
@@ -32,6 +34,7 @@ images2022 =
     , Image "2022-07" "pics/2022/RIP_mini.png" "pics/2022/RIP.png" "Requiescat In Pace"
     ]
 
+
 images2021 =
     [ Image "2021-01" "pics/2021/2021年賀状_mini.png" "pics/2021/2021年賀状.png" "New year card"
     , Image "2021-02" "pics/2021/20210214_mini.png" "pics/2021/20210214.png" "untitled"
@@ -40,12 +43,14 @@ images2021 =
     , Image "2021-05" "pics/2021/神の一滴_mini.png" "pics/2021/神の一滴.png" "One drop from God"
     ]
 
+
 images2020 =
     [ Image "2020-01" "pics/2020/メイド長_mini.png" "pics/2020/メイド長.png" "メイド長"
     , Image "2020-02" "pics/2020/gothic_lolita_mini.png" "pics/2020/gothic_lolita.png" "Gothic Lolita"
     , Image "2020-03" "pics/2020/fashion_illust_mini.png" "pics/2020/fashion_illust.png" "Fashion Show"
     , Image "2020-04" "pics/2020/actin_mini.png" "pics/2020/actin.png" "Actin fiber expands your consciousness."
     ]
+
 
 images2019 =
     [ Image "2019-01" "pics/2019/love_RGBmini.jpg" "pics/2019/love_RGB.jpg" "Love kills you."
@@ -71,6 +76,7 @@ images2016 =
     , Image "2016-05" "pics/2016/BTmini.png" "pics/2016/BT.png" "No title"
     , Image "2016-06" "pics/2016/独我論mini.jpg" "pics/2016/独我論.jpg" "独我論 (solipsism)"
     ]
+
 
 images2015 =
     [ Image "2015-01" "pics/2015/neckRGBmini.jpg" "pics/2015/neckRGB.jpg" "neck"
@@ -176,6 +182,10 @@ imagesDid =
     [ Image "w2019-01" "pics/DID_anthology/DIDmini.jpg" "pics/DID_anthology/DID.jpg" "第七回文学フリマ大阪(08.Sep.2019)"]
 
 
+imagesSelfHarm =
+    [ Image "w2020-01" "pics/self-harm_anthology/self-harm-final_mini.jpg" "pics/self-harm_anthology/self-harm-final.jpg" "文学フリマ"]
+
+
 view : Model -> Html Msg
 view model =
     div [] [
@@ -187,6 +197,8 @@ view model =
       , div [ class "row" ] ( List.map makeModal images2021 )
       , h5 [ class "gallery-year" ] [ text "2020" ]
       , div [ class "row" ] ( List.map makeModal images2020 )
+      , h6 [] [ text "Works for Clients" ]
+      , div [ class "row" ] ( List.map makeModal imagesSelfHarm )
       , h5 [ class "gallery-year" ] [ text "2019" ]
       , div [ class "row" ] ( List.map makeModal images2019 )
       , h6 [] [ text "Works for Clients" ]

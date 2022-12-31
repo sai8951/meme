@@ -6808,6 +6808,10 @@ var author$project$Page$Gallery$imagesDid = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, 'w2019-01', 'pics/DID_anthology/DIDmini.jpg', 'pics/DID_anthology/DID.jpg', '第七回文学フリマ大阪(08.Sep.2019)')
 	]);
+var author$project$Page$Gallery$imagesSelfHarm = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, 'w2020-01', 'pics/self-harm_anthology/self-harm-final_mini.jpg', 'pics/self-harm_anthology/self-harm-final.jpg', '文学フリマ')
+	]);
 var author$project$Page$Gallery$imagesSydney = _List_fromArray(
 	[
 		A4(author$project$Page$Gallery$Image, 'w2013-01', 'pics/sydney/entermini.png', 'pics/sydney/enter.png', ''),
@@ -7014,6 +7018,20 @@ var author$project$Page$Gallery$view = function (model) {
 						elm$html$Html$Attributes$class('row')
 					]),
 				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2020)),
+				A2(
+				elm$html$Html$h6,
+				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$text('Works for Clients')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$imagesSelfHarm)),
 				A2(
 				elm$html$Html$h5,
 				_List_fromArray(
