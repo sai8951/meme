@@ -18,13 +18,18 @@ type alias Image =
     , description : String
     }
 
+images2023 =
+    [ Image "2023-01" "pics/2023/2023_new_year_card_mini.png" "pics/2023/2023_new_year_card.png" "New Year Card 2023"
+    ]
+
 images2022 =
-    [ Image "2022-01" "pics/2022/melt_mini.png" "pics/2022/melt.png" "melt"
-    , Image "2022-02" "pics/2022/ippondake_color_mini.jpg" "pics/2022/ippondake_color.jpg" "妖怪イッポンダケ"
-    , Image "2022-03" "pics/2022/rimne001_mini.png" "pics/2022/rimne001.png" "輪廻"
-    , Image "2022-04" "pics/2022/unhealthy_beauty_2_mini.png" "pics/2022/unhealthy_beauty_2.png" "Unhealthy Beauty No.2"
-    , Image "2022-05" "pics/2022/tak2022_brighter_mini.png" "pics/2022/tak2022_brighter.png" "Portrait"
-    , Image "2022-06" "pics/2022/RIP_mini.png" "pics/2022/RIP.png" "Requiescat In Pace"
+    [ Image "2022-01" "pics/2022/year_of_tiger_ver2_mini.png" "pics/2022/year_of_tiger_ver2.png" "New Year Card 2022"
+    , Image "2022-02" "pics/2022/melt_mini.png" "pics/2022/melt.png" "melt"
+    , Image "2022-03" "pics/2022/ippondake_color_mini.jpg" "pics/2022/ippondake_color.jpg" "妖怪イッポンダケ"
+    , Image "2022-04" "pics/2022/rimne001_mini.png" "pics/2022/rimne001.png" "輪廻"
+    , Image "2022-05" "pics/2022/unhealthy_beauty_2_mini.png" "pics/2022/unhealthy_beauty_2.png" "Unhealthy Beauty No.2"
+    , Image "2022-06" "pics/2022/tak2022_brighter_mini.png" "pics/2022/tak2022_brighter.png" "Portrait"
+    , Image "2022-07" "pics/2022/RIP_mini.png" "pics/2022/RIP.png" "Requiescat In Pace"
     ]
 
 images2021 =
@@ -174,7 +179,9 @@ imagesDid =
 view : Model -> Html Msg
 view model =
     div [] [
-        h5 [ class "gallery-year" ] [ text "2022" ]
+        h5 [ class "gallery-year" ] [ text "2023" ]
+      , div [ class "row" ] ( List.map makeModal images2023 )
+      , h5 [ class "gallery-year" ] [ text "2022" ]
       , div [ class "row" ] ( List.map makeModal images2022 )
       , h5 [ class "gallery-year" ] [ text "2021" ]
       , div [ class "row" ] ( List.map makeModal images2021 )

@@ -6781,12 +6781,17 @@ var author$project$Page$Gallery$images2021 = _List_fromArray(
 	]);
 var author$project$Page$Gallery$images2022 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2022-01', 'pics/2022/melt_mini.png', 'pics/2022/melt.png', 'melt'),
-		A4(author$project$Page$Gallery$Image, '2022-02', 'pics/2022/ippondake_color_mini.jpg', 'pics/2022/ippondake_color.jpg', '妖怪イッポンダケ'),
-		A4(author$project$Page$Gallery$Image, '2022-03', 'pics/2022/rimne001_mini.png', 'pics/2022/rimne001.png', '輪廻'),
-		A4(author$project$Page$Gallery$Image, '2022-04', 'pics/2022/unhealthy_beauty_2_mini.png', 'pics/2022/unhealthy_beauty_2.png', 'Unhealthy Beauty No.2'),
-		A4(author$project$Page$Gallery$Image, '2022-05', 'pics/2022/tak2022_brighter_mini.png', 'pics/2022/tak2022_brighter.png', 'Portrait'),
-		A4(author$project$Page$Gallery$Image, '2022-06', 'pics/2022/RIP_mini.png', 'pics/2022/RIP.png', 'Requiescat In Pace')
+		A4(author$project$Page$Gallery$Image, '2022-01', 'pics/2022/year_of_tiger_ver2_mini.png', 'pics/2022/year_of_tiger_ver2.png', 'New Year Card 2022'),
+		A4(author$project$Page$Gallery$Image, '2022-02', 'pics/2022/melt_mini.png', 'pics/2022/melt.png', 'melt'),
+		A4(author$project$Page$Gallery$Image, '2022-03', 'pics/2022/ippondake_color_mini.jpg', 'pics/2022/ippondake_color.jpg', '妖怪イッポンダケ'),
+		A4(author$project$Page$Gallery$Image, '2022-04', 'pics/2022/rimne001_mini.png', 'pics/2022/rimne001.png', '輪廻'),
+		A4(author$project$Page$Gallery$Image, '2022-05', 'pics/2022/unhealthy_beauty_2_mini.png', 'pics/2022/unhealthy_beauty_2.png', 'Unhealthy Beauty No.2'),
+		A4(author$project$Page$Gallery$Image, '2022-06', 'pics/2022/tak2022_brighter_mini.png', 'pics/2022/tak2022_brighter.png', 'Portrait'),
+		A4(author$project$Page$Gallery$Image, '2022-07', 'pics/2022/RIP_mini.png', 'pics/2022/RIP.png', 'Requiescat In Pace')
+	]);
+var author$project$Page$Gallery$images2023 = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, '2023-01', 'pics/2023/2023_new_year_card_mini.png', 'pics/2023/2023_new_year_card.png', 'New Year Card 2023')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
@@ -6941,6 +6946,23 @@ var author$project$Page$Gallery$view = function (model) {
 		_List_Nil,
 		_List_fromArray(
 			[
+				A2(
+				elm$html$Html$h5,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text('2023')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2023)),
 				A2(
 				elm$html$Html$h5,
 				_List_fromArray(
