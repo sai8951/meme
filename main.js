@@ -6791,7 +6791,7 @@ var author$project$Page$Gallery$images2022 = _List_fromArray(
 	]);
 var author$project$Page$Gallery$images2023 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2023-01', 'pics/2023/2023_new_year_card_mini.png', 'pics/2023/2023_new_year_card.png', 'New Year Card 2023')
+		A4(author$project$Page$Gallery$Image, '2023-01', 'pics/2023/2023_new_year_card_mini.jpg', 'pics/2023/2023_new_year_card.jpg', 'New Year Card 2023')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[

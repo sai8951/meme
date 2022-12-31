@@ -20,7 +20,7 @@ type alias Image =
 
 
 images2023 =
-    [ Image "2023-01" "pics/2023/2023_new_year_card_mini.png" "pics/2023/2023_new_year_card.png" "New Year Card 2023"
+    [ Image "2023-01" "pics/2023/2023_new_year_card_mini.jpg" "pics/2023/2023_new_year_card.jpg" "New Year Card 2023"
     ]
 
 
