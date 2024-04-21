@@ -14,11 +14,16 @@ type Msg
 view : Model -> Html Msg
 view model =
     div [] [ h5 [] [ text "Biography" ]
-           , ul [] [ viewBioList "28.Jun.- 02.Jul.2019" "ワインと楽しむアート展 at Gallery IYN, Osaka"
+           , ul [] [ viewBioList "10- 17.Mar.2024" "京都芸術大学通信教育課程卒業・修了制作展 at Galerie Aube, Kyoto"
+                    , viewBioList "16- 20.Feb.2021" "Illustration exhibition <2021.February> 冬のメルヘン・ファンタジー at Recto Verso Gallery, Tokyo"
+                    , viewBioList "24- 30.Sep.2020" "個展: 北枕で夢を見る at Gallery IYN, Osaka"
+                    , viewBioList "28.Jun.- 02.Jul.2019" "ワインと楽しむアート展 at Gallery IYN, Osaka"
                     , viewBioList "18- 23.Dec.2015" "+P Tokyo2 at Design Festa Gallery, Tokyo"
                     , viewBioList "31.Jul.- 02.Aug.2015" "PosCo 10 at Design Festa Gallery, Tokyo"
                     , viewBioList "15.Jun.- 11.Jul.2015" "Pop Japan vol.5 at Me and Art Gallery, Sydney"
-                    , viewBioList "23.Mar.2015" "Ph.D. in lifescience, Kyoto University"
+                    , viewBioList "" ""
+                    , viewBioList "16.Mar.2024" "Bachelor of Fine Art, Kyoto University of Arts"
+                    , viewBioList "23.Mar.2015" "Ph.D. in Life Science, Kyoto University"
                    ]
            ]
 
