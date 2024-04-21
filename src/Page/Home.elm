@@ -27,6 +27,6 @@ view model =
             ]-}
           , div [ class "row center" ]
             [
-                img [ class "home-image", src "pics/2016/独我論.jpg" ] []
+                img [ class "home-image", src "pics/main_visual/IMG_0204.png" ] []
             ]
         ]

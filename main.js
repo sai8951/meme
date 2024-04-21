@@ -6594,11 +6594,16 @@ var author$project$Page$Biography$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
+						A2(author$project$Page$Biography$viewBioList, '10- 17.Mar.2024', '京都芸術大学通信教育課程卒業・修了制作展 at Galerie Aube, Kyoto'),
+						A2(author$project$Page$Biography$viewBioList, '16- 20.Feb.2021', 'Illustration exhibition <2021.February> 冬のメルヘン・ファンタジー at Recto Verso Gallery, Tokyo'),
+						A2(author$project$Page$Biography$viewBioList, '24- 30.Sep.2020', '個展: 北枕で夢を見る at Gallery IYN, Osaka'),
 						A2(author$project$Page$Biography$viewBioList, '28.Jun.- 02.Jul.2019', 'ワインと楽しむアート展 at Gallery IYN, Osaka'),
 						A2(author$project$Page$Biography$viewBioList, '18- 23.Dec.2015', '+P Tokyo2 at Design Festa Gallery, Tokyo'),
 						A2(author$project$Page$Biography$viewBioList, '31.Jul.- 02.Aug.2015', 'PosCo 10 at Design Festa Gallery, Tokyo'),
 						A2(author$project$Page$Biography$viewBioList, '15.Jun.- 11.Jul.2015', 'Pop Japan vol.5 at Me and Art Gallery, Sydney'),
-						A2(author$project$Page$Biography$viewBioList, '23.Mar.2015', 'Ph.D. in lifescience, Kyoto University')
+						A2(author$project$Page$Biography$viewBioList, '', ''),
+						A2(author$project$Page$Biography$viewBioList, '16.Mar.2024', 'Bachelor of Fine Art, Kyoto University of Arts'),
+						A2(author$project$Page$Biography$viewBioList, '23.Mar.2015', 'Ph.D. in Life Science, Kyoto University')
 					]))
 			]));
 };
@@ -7256,7 +7261,7 @@ var author$project$Page$Home$view = function (model) {
 						_List_fromArray(
 							[
 								elm$html$Html$Attributes$class('home-image'),
-								elm$html$Html$Attributes$src('pics/2016/独我論.jpg')
+								elm$html$Html$Attributes$src('pics/main_visual/IMG_0204.png')
 							]),
 						_List_Nil)
 					]))
