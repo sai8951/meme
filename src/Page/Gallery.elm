@@ -19,8 +19,17 @@ type alias Image =
     }
 
 
+images2024 =
+    [ Image "2024-01" "pics/2024/2024_new_year_mini.png" "pics/2024/2024_new_year.png" "New Year Card 2024"
+    , Image "2024-02" "pics/2024/delawear_mini.png" "pics/2024/delawear.png" "Delawear"
+    , Image "2024-03" "pics/2024/sleeping_calm_mini.jpg" "pics/2024/sleeping_calm.jpg" "人生ブルスク"
+    ]
+
+
 images2023 =
     [ Image "2023-01" "pics/2023/2023_new_year_card_mini.jpg" "pics/2023/2023_new_year_card.jpg" "New Year Card 2023"
+    , Image "2023-02" "pics/2023/shisha_mini.jpg" "pics/2023/shisha.jpg" "Shisha"
+    , Image "2023-03" "pics/2023/hope_is_the_thing_that_kills_you_mini.jpg" "pics/2023/hope_is_the_thing_that_kills_you.jpg" "過剰な希望と日常の崩壊"
     ]
 
 
@@ -189,7 +198,9 @@ imagesSelfHarm =
 view : Model -> Html Msg
 view model =
     div [] [
-        h5 [ class "gallery-year" ] [ text "2023" ]
+        h5 [ class "gallery-year" ] [ text "2024" ]
+      , div [ class "row" ] ( List.map makeModal images2024 )
+      , h5 [ class "gallery-year" ] [ text "2023" ]
       , div [ class "row" ] ( List.map makeModal images2023 )
       , h5 [ class "gallery-year" ] [ text "2022" ]
       , div [ class "row" ] ( List.map makeModal images2022 )
