@@ -6594,6 +6594,7 @@ var author$project$Page$Biography$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
+						A2(author$project$Page$Biography$viewBioList, '30.Jul.- 12.Aug.2024', '京都芸術大学通信教育課程 ゆうゆう会日本画展 at Sato Museum, Tokyo'),
 						A2(author$project$Page$Biography$viewBioList, '10- 17.Mar.2024', '京都芸術大学通信教育課程卒業・修了制作展 at Galerie Aube, Kyoto'),
 						A2(author$project$Page$Biography$viewBioList, '16- 20.Feb.2021', 'Illustration exhibition <2021.February> 冬のメルヘン・ファンタジー at Recto Verso Gallery, Tokyo'),
 						A2(author$project$Page$Biography$viewBioList, '24- 30.Sep.2020', '個展: 北枕で夢を見る at Gallery IYN, Osaka'),
@@ -6796,7 +6797,15 @@ var author$project$Page$Gallery$images2022 = _List_fromArray(
 	]);
 var author$project$Page$Gallery$images2023 = _List_fromArray(
 	[
-		A4(author$project$Page$Gallery$Image, '2023-01', 'pics/2023/2023_new_year_card_mini.jpg', 'pics/2023/2023_new_year_card.jpg', 'New Year Card 2023')
+		A4(author$project$Page$Gallery$Image, '2023-01', 'pics/2023/2023_new_year_card_mini.jpg', 'pics/2023/2023_new_year_card.jpg', 'New Year Card 2023'),
+		A4(author$project$Page$Gallery$Image, '2023-02', 'pics/2023/shisha_mini.jpg', 'pics/2023/shisha.jpg', 'Shisha'),
+		A4(author$project$Page$Gallery$Image, '2023-03', 'pics/2023/hope_is_the_thing_that_kills_you_mini.jpg', 'pics/2023/hope_is_the_thing_that_kills_you.jpg', '過剰な希望と日常の崩壊')
+	]);
+var author$project$Page$Gallery$images2024 = _List_fromArray(
+	[
+		A4(author$project$Page$Gallery$Image, '2024-01', 'pics/2024/2024_new_year_mini.png', 'pics/2024/2024_new_year.png', 'New Year Card 2024'),
+		A4(author$project$Page$Gallery$Image, '2024-02', 'pics/2024/delawear_mini.png', 'pics/2024/delawear.png', 'Delawear'),
+		A4(author$project$Page$Gallery$Image, '2024-03', 'pics/2024/sleeping_calm_mini.jpg', 'pics/2024/sleeping_calm.jpg', '人生ブルスク')
 	]);
 var author$project$Page$Gallery$imagesBefore2012 = _List_fromArray(
 	[
@@ -6955,6 +6964,23 @@ var author$project$Page$Gallery$view = function (model) {
 		_List_Nil,
 		_List_fromArray(
 			[
+				A2(
+				elm$html$Html$h5,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gallery-year')
+					]),
+				_List_fromArray(
+					[
+						elm$html$Html$text('2024')
+					])),
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('row')
+					]),
+				A2(elm$core$List$map, author$project$Page$Gallery$makeModal, author$project$Page$Gallery$images2024)),
 				A2(
 				elm$html$Html$h5,
 				_List_fromArray(

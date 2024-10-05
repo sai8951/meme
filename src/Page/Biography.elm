@@ -14,7 +14,8 @@ type Msg
 view : Model -> Html Msg
 view model =
     div [] [ h5 [] [ text "Biography" ]
-           , ul [] [ viewBioList "10- 17.Mar.2024" "京都芸術大学通信教育課程卒業・修了制作展 at Galerie Aube, Kyoto"
+           , ul [] [ viewBioList "30.Jul.- 12.Aug.2024" "京都芸術大学通信教育課程 ゆうゆう会日本画展 at Sato Museum, Tokyo" 
+                    , viewBioList "10- 17.Mar.2024" "京都芸術大学通信教育課程卒業・修了制作展 at Galerie Aube, Kyoto"
                     , viewBioList "16- 20.Feb.2021" "Illustration exhibition <2021.February> 冬のメルヘン・ファンタジー at Recto Verso Gallery, Tokyo"
                     , viewBioList "24- 30.Sep.2020" "個展: 北枕で夢を見る at Gallery IYN, Osaka"
                     , viewBioList "28.Jun.- 02.Jul.2019" "ワインと楽しむアート展 at Gallery IYN, Osaka"
