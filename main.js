@@ -7360,6 +7360,7 @@ var author$project$Page$Links$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
+						A3(author$project$Page$Links$viewLinksList, 'Me as a JPN-style Painter:', 'IWANO Shinsetsu', 'https://sites.google.com/view/iwanoshinsetsu'),
 						A3(author$project$Page$Links$viewLinksList, 'Twitter :', 'sai_e1113', 'https://twitter.com/sai_e1113'),
 						A3(author$project$Page$Links$viewLinksList, 'Instagram :', 'saitou_sai', 'https://www.instagram.com/saitou_sai/'),
 						A3(author$project$Page$Links$viewLinksList, 'pixiv :', '斎藤さい', 'https://www.pixiv.net/member.php?id=2718132'),

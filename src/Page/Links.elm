@@ -14,7 +14,8 @@ type Msg
 view : Model -> Html Msg
 view model =
     div [] [ h5 [] [ text "Links" ]
-           , ul [] [ viewLinksList "Twitter :" "sai_e1113" "https://twitter.com/sai_e1113"
+           , ul [] [ viewLinksList "Me as a JPN-style Painter:" "IWANO Shinsetsu" "https://sites.google.com/view/iwanoshinsetsu"
+                    , viewLinksList "Twitter :" "sai_e1113" "https://twitter.com/sai_e1113"
                     , viewLinksList "Instagram :" "saitou_sai" "https://www.instagram.com/saitou_sai/"
                     , viewLinksList "pixiv :" "斎藤さい" "https://www.pixiv.net/member.php?id=2718132"
                     , viewLinksList "deviantArt :" "sai-wind" "https://www.deviantart.com/sai-wind"
